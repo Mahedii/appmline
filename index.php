@@ -10,7 +10,7 @@
 
 //  		echo $total=mysql_num_rows($rspta);
 
-header('Location: vistas/login.html');
+header('Location: vista/login.html');
 
 
  ?>
