@@ -41,9 +41,14 @@ switch ($_GET["op"]){
 
  		while ($reg=$rspta->fetch_object()){
  			$data[]=array(
- 				"0"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->iding_gas.')"><i class="fa fa-remove" ></i></a>'.
- 					' <a title="Editar" href="#" onclick="mostrar('.$reg->iding_gas.')"><i class="fa fa-edit"></i></a>',
- 				"1"=>$reg->concepto,
+ 				"0"=>$reg->concepto,
+				"1" => '<div class="dropdown d-inline-block">'.
+							'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
+							'<ul class="dropdown-menu dropdown-menu-end">'.
+								'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->iding_gas.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
+								'<li><a class="dropdown-item remove-item-btn" title="Eliminar" href="#" onclick="eliminar('.$reg->iding_gas.')"><i class="text-primary ti ti-trash align-bottom text-muted"></i> Delete</a></li>'.
+							'</ul>'.
+						'</div>',
  				"2"=>$reg->ingreso,
  				"3"=>$reg->gasto,
  				"4"=>$reg->observacion,

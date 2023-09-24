@@ -1,136 +1,93 @@
- <!-- Main Footer -->
-  <footer class="main-footer">
-  <!-- To the right -->
-    <div class="pull-right hidden-xs">
-      Version 1.0
-    </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2023 <a href="#">M_line</a>.</strong> Todos los derechos reservados.
-  </footer>
+          <!-- Footer -->
+          <footer class="content-footer footer bg-footer-theme">
+            <div class="container-xxl">
+              <div class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
+                <div>
+                  © <script>
+                  document.write(new Date().getFullYear())
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane active" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Actividad reciente</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:;">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Calendario festivo</h4>
-
-                <p>Próximo puente, 12 de Octubre</p>
+                  </script>
+                  , made with ❤️ by <a href="https://mahadiislam.com/" target="_blank" class="fw-medium">Mahadi</a>
+                </div>
               </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
+            </div>
+          </footer>
+          <!-- / Footer -->
 
-        <h3 class="control-sidebar-heading">Tareas en curso</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:;">
-              <h4 class="control-sidebar-subheading">
-                Personalizar el diseño
-                <span class="pull-right-container">
-                    <span class="label label-danger pull-right">70%</span>
-                  </span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
+          
+          <div class="content-backdrop fade"></div>
+        </div>
 
       </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">Configuración geneneral</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Panel de reportes del uso
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Resumen de la información de reglages
-            </p>
-          </div>
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
     </div>
-  </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-  immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
 
-<!-- REQUIRED JS SCRIPTS -->
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+    
+    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+    <div class="drag-target"></div>
+      
+  </div>
+  <!-- / Layout wrapper -->
+  
 
-<!-- jQuery 3 -->
-<script src="../public/dist/js/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="../public/dist/js/bootstrap.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../public/dist/js/adminlte.min.js"></script>
-<script src="../public/dist/js/moment.min.js"></script>
-<script src="../public/dist/js/bootstrap-datepicker.min.js"></script>
-<script src="../public/dist/js/daterangepicker.js"></script>
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
 
-    <!-- DATATABLES -->
-    <script src="../public/dist/datatables/jquery.dataTables.min.js"></script>    
-    <script src="../public/dist/datatables/dataTables.buttons.min.js"></script>
-    <script src="../public/dist/datatables/buttons.html5.min.js"></script>
-    <script src="../public/dist/datatables/buttons.colVis.min.js"></script>
-    <script src="../public/dist/datatables/jszip.min.js"></script>
-    <script src="../public/dist/datatables/pdfmake.min.js"></script>
-    <script src="../public/dist/datatables/vfs_fonts.js"></script> 
-    <script src="../public/dist/js/bootbox.min.js"></script> 
-    <script src="../public/dist/js/bootstrap-select.min.js"></script>
+  <script src="../public/dist/assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../public/dist/assets/vendor/libs/popper/popper.js"></script>
+  <script src="../public/dist/assets/vendor/js/bootstrap.js"></script>
+  <script src="../public/dist/assets/vendor/libs/node-waves/node-waves.js"></script>
+  <script src="../public/dist/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="../public/dist/assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="../public/dist/assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="../public/dist/assets/vendor/libs/typeahead-js/typeahead.js"></script>
+  <script src="../public/dist/assets/vendor/js/menu.js"></script>
+  
+  <!-- endbuild -->
 
+  <!-- Vendors JS -->
+  <script src="../public/dist/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+  <script src="../public/dist/assets/vendor/libs/swiper/swiper.js"></script>
+  <!-- <script src="../public/dist/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script> -->
 
+  <!--datatable js-->
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
 
-    <script>
-        $(function () {
-            var url = window.location;
-            // for single sidebar menu
-            $('ul.sidebar-menu a').filter(function () {
-              //console.log(this.href);
-              //console.log(url);
-                return this.href == url;
-            }).addClass('active');
+  <script src="../public/dist/assets/js/datatables.init.js"></script>
 
-            // for sidebar menu and treeview
-            $('ul.treeview a').filter(function () {
-                return this.href == url;
-            }).parentsUntil(".treeview.menu-open > ul.treeview-menu")
-        .css({'display': 'block'})
-        .addClass('menu-open').prev('a')
-        .addClass('active');
-        });
-    </script>
+  
+  <!-- <script src="../public/dist/assets/vendor/libs/cleavejs/cleave.js"></script>
+  <script src="../public/dist/assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+  <script src="../public/dist/assets/vendor/libs/moment/moment.js"></script>
+  <script src="../public/dist/assets/vendor/libs/flatpickr/flatpickr.js"></script> -->
 
+  <script src="../public/dist/js/bootstrap-select.min.js"></script>
+  <!--select2 cdn-->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <script src="../public/dist/assets/js/select2.init.js"></script>
+  <!-- <script src="../public/dist/assets/vendor/libs/select2/select2.js"></script> -->
+
+  <!-- Main JS -->
+  <script src="../public/dist/assets/js/main.js"></script>
+  
+  <!-- Page JS -->
+  <!-- <script src="../public/dist/assets/js/dashboards-analytics.js"></script> -->
+
+  <script src="../public/dist/assets/js/cards-actions.js"></script>
+  
+  <script src="../public/dist/js/bootbox.min.js"></script> 
+
+  
 </body>
+
 </html>

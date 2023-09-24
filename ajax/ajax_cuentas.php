@@ -57,8 +57,13 @@ switch ($_GET["op"]){
 			case 'CajeroUV': // SI ES UN USUARIO DE LA CAJA UV venta de unidades
 			
  			$data[]=array(
- 				"0"=>'<a title="Editar" href="#" onclick="mostrar('.$reg->numerocuenta.')"><i class="fa fa-edit"></i></a>',
-				"1"=>$enum,
+				"0"=>$enum,
+				"1" => '<div class="dropdown d-inline-block">'.
+							'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
+							'<ul class="dropdown-menu dropdown-menu-end">'.
+								'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->numerocuenta.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
+							'</ul>'.
+						'</div>',
 				"2"=>$reg->nomcompleto,
  				"3"=>$reg->numerocuenta,
 				"4"=>$reg->tipo_cuenta,
@@ -78,9 +83,14 @@ switch ($_GET["op"]){
 
 			default: // Sea Admin, Super Admin, Supervisor
 			$data[]=array(
-				"0"=>'<a title="Cerrar" class="label bg-red" href="#" onclick="eliminar('.$reg->numerocuenta.')"><i class="fa fa-remove" ></i></a>'.
-					' <a title="Editar" href="#" onclick="mostrar('.$reg->numerocuenta.')"><i class="fa fa-edit"></i></a>',
-			   "1"=>$enum,
+			   "0"=>$enum,
+			   "1" => '<div class="dropdown d-inline-block">'.
+							'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
+							'<ul class="dropdown-menu dropdown-menu-end">'.
+								'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->numerocuenta.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
+								'<li><a class="dropdown-item remove-item-btn" title="Eliminar" href="#" onclick="eliminar('.$reg->numerocuenta.')"><i class="text-primary ti ti-trash align-bottom text-muted"></i> Delete</a></li>'.
+							'</ul>'.
+						'</div>',
 			   "2"=>$reg->nomcompleto,
 				"3"=>$reg->numerocuenta,
 			   "4"=>$reg->tipo_cuenta,

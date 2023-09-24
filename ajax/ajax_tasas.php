@@ -45,9 +45,14 @@ switch ($_GET["op"]){
 
  		while ($reg=$rspta->fetch_object()){
  			$data[]=array(
- 				"0"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idTasas.')"><i class="fa fa-remove" ></i></a>'.
- 					' <a title="Editar" href="#" onclick="mostrar('.$reg->idTasas.')"><i class="fa fa-edit"></i></a>',
-				"1"=>$reg->pais_origenNOM,
+				"0"=>$reg->pais_origenNOM,
+				"1" => '<div class="dropdown d-inline-block">'.
+							'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
+							'<ul class="dropdown-menu dropdown-menu-end">'.
+								'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->idTasas.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
+								'<li><a class="dropdown-item remove-item-btn" title="Eliminar" href="#" onclick="eliminar('.$reg->idTasas.')"><i class="text-primary ti ti-trash align-bottom text-muted"></i> Delete</a></li>'.
+							'</ul>'.
+						'</div>',
 				"2"=>$reg->pais_destinoNOM,
 				"3"=>$reg->Descripcion,
  				"4"=>number_format($reg->Monto1, 0, '', ','),
