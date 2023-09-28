@@ -89,7 +89,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Nombre caja (*):</label>
-                      <input type="text" class="form-control" name="nombre" id="nombre" maxlength="30" placeholder="Nombre de la caja" required>
+                      <input type="text" class="form-control rounded-pill" name="nombre" id="nombre" maxlength="30" placeholder="Nombre de la caja" required>
                     </div>
                     <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Cajero (*):</label>
@@ -98,15 +98,15 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Numero cuenta CORRIENTE :</label>
-                      <input type="number" class="form-control" name="ncpCorriente" id="ncpCorriente" maxlength="45" placeholder="Numero cuenta corriente">
+                      <input type="number" class="form-control rounded-pill" name="ncpCorriente" id="ncpCorriente" maxlength="45" placeholder="Numero cuenta corriente">
                     </div>
                     <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Numero cuenta COMISIONES:</label>
-                      <input type="number" class="form-control" name="ncpComisiones" id="ncpComisiones" maxlength="45" placeholder="Numero de cuenta de comisiones">
+                      <input type="number" class="form-control rounded-pill" name="ncpComisiones" id="ncpComisiones" maxlength="45" placeholder="Numero de cuenta de comisiones">
                     </div>
                     <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Monto maximo envio:</label>
-                      <input type="text" class="form-control" name="montoMaxEnvio" id="montoMaxEnvio" maxlength="45" placeholder="Monto maximo envio">
+                      <input type="text" class="form-control rounded-pill" name="montoMaxEnvio" id="montoMaxEnvio" maxlength="45" placeholder="Monto maximo envio">
                     </div>
                     <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Caja cerrada :</label>
@@ -140,12 +140,12 @@ if (!isset($_SESSION["ap"])) {
                             <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="text" class="form-control pull-right" name="rangofechas" id="rangofechas" >
+                            <input type="text" class="form-control rounded-pill pull-right" name="rangofechas" id="rangofechas" >
                             </div>
                         </div> 
                         <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                         <label>Accion</label>
-                        <button class="btn btn-info form-control" type="button" id="btnFiltrar"><i class="fa fa-filter"></i> Buscar</button>
+                        <button class="btn btn-info form-control rounded-pill" type="button" id="btnFiltrar"><i class="fa fa-filter"></i> Buscar</button>
                       </div>
                       <form role="form">
                         <table id="detalles" class="table table-striped table-bordered table-condensed table-hover">
@@ -201,7 +201,7 @@ if (!isset($_SESSION["ap"])) {
                         </div>
                         <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Cuenta CORRIENTE remitente (*):</label>
-                          <input type="text" class="form-control" name="ncpremitente" id="ncpremitente" maxlength="45" placeholder="Numero de cuenta remitente" required>
+                          <input type="text" class="form-control rounded-pill" name="ncpremitente" id="ncpremitente" maxlength="45" placeholder="Numero de cuenta remitente" required>
                         </div>
 
                         <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -217,11 +217,11 @@ if (!isset($_SESSION["ap"])) {
                         </div>
                         <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Cuenta CORRIENTE beneficiaria (*):</label>
-                          <input type="text" class="form-control" name="ncpbeneficiaria" id="ncpbeneficiaria" maxlength="45" placeholder="Numero de cuenta remitente" required>
+                          <input type="text" class="form-control rounded-pill" name="ncpbeneficiaria" id="ncpbeneficiaria" maxlength="45" placeholder="Numero de cuenta remitente" required>
                         </div>
                         <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Monto (*):</label>
-                          <input type="number" class="form-control" name="monto" id="monto" maxlength="10" placeholder="Monto maximo envio">
+                          <input type="number" class="form-control rounded-pill" name="monto" id="monto" maxlength="10" placeholder="Monto maximo envio">
                         </div>
                         <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Tipo de operacion (*):</label>
@@ -234,7 +234,7 @@ if (!isset($_SESSION["ap"])) {
                         </div>
                         <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Descripción:</label>
-                          <textarea class="form-control" name="descripcion" id="descripcion" maxlength="45" rows="2" placeholder="Descripción de la operacion"></textarea>
+                          <textarea class="form-control rounded-pill" name="descripcion" id="descripcion" maxlength="45" rows="2" placeholder="Descripción de la operacion"></textarea>
                         </div>
                       </form>
                     </div>

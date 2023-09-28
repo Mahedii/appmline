@@ -65,15 +65,15 @@ if (!isset($_SESSION["ap"])) {
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Nombre completo(*):</label>
                       <input type="hidden" name="modif" id="modif">
-                      <input type="text" class="form-control" name="nomcompleto" id="nomcompleto" maxlength="50" placeholder="Nombre completpo" required>
+                      <input type="text" class="form-control rounded-pill" name="nomcompleto" id="nomcompleto" maxlength="50" placeholder="Nombre completpo" required>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>DNI (*):</label>
-                      <input type="text" class="form-control" onmousemove="generarCuentaCliente(value)" onkeypress="generarCuentaCliente(value)" onmouseleave="generarCuentaCliente(value)" name="DNIremitente" id="DNIremitente" maxlength="10" placeholder="DNI del cliente" required>
+                      <input type="text" class="form-control rounded-pill" onmousemove="generarCuentaCliente(value)" onkeypress="generarCuentaCliente(value)" onmouseleave="generarCuentaCliente(value)" name="DNIremitente" id="DNIremitente" maxlength="10" placeholder="DNI del cliente" required>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Telefono (*):</label>
-                      <input type="text" class="form-control" name="tel" id="tel" maxlength="22" placeholder="Telefono del cliente">
+                      <input type="text" class="form-control rounded-pill" name="tel" id="tel" maxlength="22" placeholder="Telefono del cliente">
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Pais (*):</label>
@@ -82,7 +82,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Direccion:</label>
-                      <input type="text" class="form-control" name="direccion" id="direccion" maxlength="80" placeholder="Direccion del cliente">
+                      <input type="text" class="form-control rounded-pill" name="direccion" id="direccion" maxlength="80" placeholder="Direccion del cliente">
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Agencia :</label>
@@ -91,7 +91,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Numero cuenta CORRIENTE:</label>
-                      <input type="text" class="form-control" name="ncp" id="ncp" maxlength="40" placeholder="Numero de cuenta">
+                      <input type="text" class="form-control rounded-pill" name="ncp" id="ncp" maxlength="40" placeholder="Numero de cuenta">
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Estado:</label>

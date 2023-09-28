@@ -71,12 +71,12 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Numero DIP Remitente:</label>
-                      <input type="text" class="form-control" onmouseout="buscarRemitenteRellenarNuevo(this.value)" name="DNIremitente" id="DNIremitente" maxlength="10" minlength="6" placeholder="DNI del remitente" required>
+                      <input type="text" class="form-control rounded-pill" onmouseout="buscarRemitenteRellenarNuevo(this.value)" name="DNIremitente" id="DNIremitente" maxlength="10" minlength="6" placeholder="DNI del remitente" required>
                     </div>
 
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Telefono receptor:</label>
-                      <input type="text" class="form-control" onmouseout="buscarReceptorRellenarNuevo(this.value)" name="telefonorec" id="telefonorec" minlength="9" maxlength="10" placeholder="Telefono del receptor" required>
+                      <input type="text" class="form-control rounded-pill" onmouseout="buscarReceptorRellenarNuevo(this.value)" name="telefonorec" id="telefonorec" minlength="9" maxlength="10" placeholder="Telefono del receptor" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Nombre Remitente:<span class="label label-success" id="nombreSINO"></span> </label>
@@ -87,60 +87,60 @@ if (!isset($_SESSION["ap"])) {
                       <input type="hidden" name="referenciaAc" id="referenciaAc">
                       <input type="hidden" name="codigoAc" id="codigoAc">
                       <input type="hidden" name="saldo" id="saldo">
-                      <input type="text" class="form-control" name="nombreremitente" id="nombreremitente" maxlength="100" placeholder="Nombre del remitente" required>
+                      <input type="text" class="form-control rounded-pill" name="nombreremitente" id="nombreremitente" maxlength="100" placeholder="Nombre del remitente" required>
                     </div>
 
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Nombre Receptor:<span class="label label-success" id="nombreRSINO"></span> </label>
-                      <input type="text" class="form-control" name="nombrereceptor" id="nombrereceptor" maxlength="100" placeholder="Nombre del receptor" required>
+                      <input type="text" class="form-control rounded-pill" name="nombrereceptor" id="nombrereceptor" maxlength="100" placeholder="Nombre del receptor" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Telefono remitente:</label>
-                      <input type="text" class="form-control" name="telefonorem" id="telefonorem" maxlength="10" minlength="9" placeholder="Telefono del remitente" required>
+                      <input type="text" class="form-control rounded-pill" name="telefonorem" id="telefonorem" maxlength="10" minlength="9" placeholder="Telefono del remitente" required>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Dirección receptor:</label>
-                      <input type="text" class="form-control" name="dirreceptor" id="dirreceptor" maxlength="45" placeholder="Direccion del receptor" required>
+                      <input type="text" class="form-control rounded-pill" name="dirreceptor" id="dirreceptor" maxlength="45" placeholder="Direccion del receptor" required>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Codigo secreto:</label>
-                      <input type="number" class="form-control" name="secreto" id="secreto" maxlength="45" placeholder="Codigo secreto" required>
+                      <input type="number" class="form-control rounded-pill" name="secreto" id="secreto" maxlength="45" placeholder="Codigo secreto" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Dirección remitente:</label>
-                      <input type="text" class="form-control" name="dirremitente" id="dirremitente" maxlength="45" placeholder="Direccion del remitente" required>
+                      <input type="text" class="form-control rounded-pill" name="dirremitente" id="dirremitente" maxlength="45" placeholder="Direccion del remitente" required>
                     </div>
 
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Tipo transaccion:</label>
-                      <select class="form-control" name="pais_destino" id="pais_destino" required>
+                      <select class="form-control rounded-pill" name="pais_destino" id="pais_destino" required>
                         <option value="1">Divisas</option>
                         <option value="2">Paquete</option>
                       </select>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Monto:</label>
-                      <input onmouseout="comisiones(), traerSaldoActual(), verficarSaldo(this.value)" type="number" class="form-control" name="monto" id="monto" min="2000" max="1000000" maxlength="9" placeholder="Monto de envio">
+                      <input onmouseout="comisiones(), traerSaldoActual(), verficarSaldo(this.value)" type="number" class="form-control rounded-pill" name="monto" id="monto" min="2000" max="1000000" maxlength="9" placeholder="Monto de envio">
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Comisión envio:</label>
-                      <input type="text" readonly="" class="form-control" name="comision" id="comision" maxlength="20" placeholder="Comisión de envio">
+                      <input type="text" readonly="" class="form-control rounded-pill" name="comision" id="comision" maxlength="20" placeholder="Comisión de envio">
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Comisión caja:</label>
-                      <input type="text" readonly="" class="form-control" name="comi_remi" id="comi_remi" maxlength="20" placeholder="Comisión de caja" readonly>
+                      <input type="text" readonly="" class="form-control rounded-pill" name="comi_remi" id="comi_remi" maxlength="20" placeholder="Comisión de caja" readonly>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>IVA:</label>
-                      <input type="text" readonly="" class="form-control" name="IVA" id="IVA" maxlength="20" placeholder="IVA" readonly>
+                      <input type="text" readonly="" class="form-control rounded-pill" name="IVA" id="IVA" maxlength="20" placeholder="IVA" readonly>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>A COBRAR:</label>
-                      <input type="text" readonly="" class="form-control" name="aCobrar" id="aCobrar" maxlength="20" placeholder="Cobrar" readonly>
+                      <input type="text" readonly="" class="form-control rounded-pill" name="aCobrar" id="aCobrar" maxlength="20" placeholder="Cobrar" readonly>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Descripción:</label>
-                      <input type="text" class="form-control" name="descripcion" id="descripcion" maxlength="45" placeholder="Descripción si es un paquete">
+                      <input type="text" class="form-control rounded-pill" name="descripcion" id="descripcion" maxlength="45" placeholder="Descripción si es un paquete">
                     </div>
                   </div>
                   <div class="pt-4">
@@ -170,11 +170,11 @@ if (!isset($_SESSION["ap"])) {
               <input type="hidden" name="idtransaccionsms" id="idtransaccionsms">
               <input type="hidden" name="monantes" id="monantes">
               <input type="hidden" name="idsolicitud" id="idsolicitud">
-              <textarea name="mensaje" id="mensaje" class="form-control" placeholder="Mensaje para el administrador" rows="3" maxlength="60" ></textarea>
+              <textarea name="mensaje" id="mensaje" class="form-control rounded-pill" placeholder="Mensaje para el administrador" rows="3" maxlength="60" ></textarea>
             </div>
             <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <label>Descripción:</label>
-                <textarea class="form-control" name="descripcionsms" id="descripcionsms" maxlength="45" rows="3" placeholder="Descripción del problema"></textarea>
+                <textarea class="form-control rounded-pill" name="descripcionsms" id="descripcionsms" maxlength="45" rows="3" placeholder="Descripción del problema"></textarea>
             </div>
           </form>
         </div>

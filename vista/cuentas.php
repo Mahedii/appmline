@@ -97,11 +97,11 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Numero de CUENTA :</label>
-                      <input type="text" class="form-control" name="numerocuenta" id="numerocuenta" maxlength="40" placeholder="Numero de cuenta" readonly required>
+                      <input type="text" class="form-control rounded-pill" name="numerocuenta" id="numerocuenta" maxlength="40" placeholder="Numero de cuenta" readonly required>
                     </div>
                     <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>SALDO:</label>
-                      <input type="text" class="form-control" name="saldo" id="saldo" maxlength="40" placeholder="Saldo de la cuenta" readonly>
+                      <input type="text" class="form-control rounded-pill" name="saldo" id="saldo" maxlength="40" placeholder="Saldo de la cuenta" readonly>
                     </div>
                     <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Agencia Master Ligada :</label>

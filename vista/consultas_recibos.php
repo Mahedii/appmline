@@ -25,15 +25,15 @@ if (!isset($_SESSION["ap"])) {
                 <div class="row g-3 py-3 mb-2">
                   <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <label>Fecha de inicio</label>
-                    <input type="date" class="form-control" name="fecha_inicio" id="fecha_inicio" value="<?php echo date("Y-m-d"); ?>">
+                    <input type="date" class="form-control rounded-pill" name="fecha_inicio" id="fecha_inicio" value="<?php echo date("Y-m-d"); ?>">
                   </div>
                   <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <label>Fecha de fin</label>
-                    <input type="date" class="form-control" name="fecha_final" id="fecha_final" value="<?php echo date("Y-m-d"); ?>">
+                    <input type="date" class="form-control rounded-pill" name="fecha_final" id="fecha_final" value="<?php echo date("Y-m-d"); ?>">
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <label>Receptor</label>
-                    <select class="form-control js-example-basic-single" name="DNIremitente" id="DNIremitente" required>
+                    <select class="form-control rounded-pill js-example-basic-single" name="DNIremitente" id="DNIremitente" required>
                     </select>
                   </div>
 

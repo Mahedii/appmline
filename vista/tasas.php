@@ -63,27 +63,27 @@ if (!isset($_SESSION["ap"])) {
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Descripción:</label>
                       <input type="hidden" name="idTasas" id="idTasas">
-                      <input type="text" class="form-control" name="Descripcion" id="Descripcion" maxlength="20" placeholder="Descripción Ej. De 60,001 a 12000" required>
+                      <input type="text" class="form-control rounded-pill" name="Descripcion" id="Descripcion" maxlength="20" placeholder="Descripción Ej. De 60,001 a 12000" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>[Monto inicial*:</label>
-                      <input type="text" class="form-control" name="Monto1" id="Monto1" maxlength="20" placeholder="Monto 1" required>
+                      <input type="text" class="form-control rounded-pill" name="Monto1" id="Monto1" maxlength="20" placeholder="Monto 1" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Monto tope]*:</label>
-                      <input type="text" class="form-control" name="Monto2" id="Monto2" maxlength="20" placeholder="Monto 2" required>
+                      <input type="text" class="form-control rounded-pill" name="Monto2" id="Monto2" maxlength="20" placeholder="Monto 2" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Comisión *:</label>
-                      <input type="text" class="form-control" name="comisiont" id="comisiont" maxlength="20" placeholder="Comisión por envio" required>
+                      <input type="text" class="form-control rounded-pill" name="comisiont" id="comisiont" maxlength="20" placeholder="Comisión por envio" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Monto por KILO :</label>
-                      <input type="text" class="form-control" name="MontoKILO" id="MontoKILO" maxlength="20" placeholder="Monto fijo por KILO" required>
+                      <input type="text" class="form-control rounded-pill" name="MontoKILO" id="MontoKILO" maxlength="20" placeholder="Monto fijo por KILO" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Monto por SOBRE :</label>
-                      <input type="text" class="form-control" name="MontoSOBRE" id="MontoSOBRE" maxlength="20" placeholder="Monto fijo por SOBRE" required>
+                      <input type="text" class="form-control rounded-pill" name="MontoSOBRE" id="MontoSOBRE" maxlength="20" placeholder="Monto fijo por SOBRE" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Pais origen(*):</label>

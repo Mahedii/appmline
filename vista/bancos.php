@@ -78,11 +78,11 @@ if (!isset($_SESSION["ap"])) {
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Nombre (*):</label>
                       <input type="hidden" name="idbanco" id="idbanco">
-                      <input type="text" class="form-control" name="nombre" id="nombre" maxlength="55" placeholder="Nombre agencia" required>
+                      <input type="text" class="form-control rounded-pill" name="nombre" id="nombre" maxlength="55" placeholder="Nombre agencia" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Descripción:</label>
-                      <input type="text" class="form-control" name="descripcion" id="descripcion" maxlength="45" placeholder="Descripción agencia" required>
+                      <input type="text" class="form-control rounded-pill" name="descripcion" id="descripcion" maxlength="45" placeholder="Descripción agencia" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Pais (*):</label>
@@ -91,7 +91,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-6 col-6 md-6 col-sm-6 col-xs-12">
                       <label>Maximo de agencias:</label>
-                      <input type="text" class="form-control" name="max_agencias" id="max_agencias" maxlength="45" placeholder="Maximo de agencias" required>
+                      <input type="text" class="form-control rounded-pill" name="max_agencias" id="max_agencias" maxlength="45" placeholder="Maximo de agencias" required>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Responsable (*):</label>
@@ -101,15 +101,15 @@ if (!isset($_SESSION["ap"])) {
 
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Numero de cuenta CAPITAL:</label>
-                      <input type="text" class="form-control" name="ncp" id="ncp" maxlength="45" placeholder="Numero de cuenta capital" required readonly>
+                      <input type="text" class="form-control rounded-pill" name="ncp" id="ncp" maxlength="45" placeholder="Numero de cuenta capital" required readonly>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Numero de cuenta COMISIONES:</label>
-                      <input type="text" class="form-control" name="ncpComisiones" id="ncpComisiones" maxlength="45" placeholder="Numero de cuenta comisiones" required readonly>
+                      <input type="text" class="form-control rounded-pill" name="ncpComisiones" id="ncpComisiones" maxlength="45" placeholder="Numero de cuenta comisiones" required readonly>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Numero de cuenta IVA:</label>
-                      <input type="text" class="form-control" name="ncpIVA" id="ncpIVA" maxlength="45" placeholder="Numero de cuenta iva" required readonly>
+                      <input type="text" class="form-control rounded-pill" name="ncpIVA" id="ncpIVA" maxlength="45" placeholder="Numero de cuenta iva" required readonly>
                     </div>
                   </div>
 
@@ -136,17 +136,17 @@ if (!isset($_SESSION["ap"])) {
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Cuenta de CAPITAL A CREDITAR (*):</label>
-                          <input readonly="" type="text" class="form-control" name="ncpCREDITAR" id="ncpCREDITAR" maxlength="45" placeholder="Cuenta del capital">
+                          <input readonly="" type="text" class="form-control rounded-pill" name="ncpCREDITAR" id="ncpCREDITAR" maxlength="45" placeholder="Cuenta del capital">
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Nombre Banco :</label>
-                          <input readonly="" type="text" class="form-control" name="banco" id="banco" maxlength="45" placeholder="Banco">
+                          <input readonly="" type="text" class="form-control rounded-pill" name="banco" id="banco" maxlength="45" placeholder="Banco">
 
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Monto (*):</label>
-                          <input type="number" class="form-control" name="monto" id="monto" maxlength="10" placeholder="Monto añadir">
+                          <input type="number" class="form-control rounded-pill" name="monto" id="monto" maxlength="10" placeholder="Monto añadir">
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Tipo de operacion (*):</label>
@@ -156,7 +156,7 @@ if (!isset($_SESSION["ap"])) {
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Descripción:</label>
-                          <textarea class="form-control" name="descripcion" id="descripcion" maxlength="45" rows="2" placeholder="Descripción de la operacion"></textarea>
+                          <textarea class="form-control rounded-pill" name="descripcion" id="descripcion" maxlength="45" rows="2" placeholder="Descripción de la operacion"></textarea>
                         </div>
                       </form>
                     </div>

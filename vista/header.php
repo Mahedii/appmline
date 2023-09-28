@@ -47,11 +47,12 @@
 
     <!-- <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
-    <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css"> -->
+    <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css">
+    <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
+    <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.css"> -->
 
     <!--datatable css-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
-    <!--datatable responsive css-->
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
 
@@ -90,75 +91,77 @@
         </div>
 
         <div class="menu-inner-shadow"></div>
+
+        <?php $activePage = basename($_SERVER['PHP_SELF'], ".php"); ?>
         
         <ul class="menu-inner py-1">
 
           <li class="menu-header small text-uppercase">
             <span class="menu-header-text">MENU</span>
           </li>
-          <li class="menu-item">
+          <li class="menu-item  <?php echo ($activePage === 'escritorio') ? 'active' : ''; ?>">
             <a href="escritorio.php" class="menu-link">
               <i class="menu-icon tf-icons fa fa-laptop"></i>
               <div data-i18n="Escritorio">Escritorio</div>
             </a>
           </li>
-          <li class="menu-item">
+          <li class="menu-item  <?php echo ($activePage === 'envios') ? 'active' : ''; ?>">
             <a href="envios.php" class="menu-link">
               <i class="menu-icon tf-icons ti ti-send"></i>
               <div data-i18n="Envios">Envios</div>
             </a>
           </li>
-          <li class="menu-item">
+          <li class="menu-item  <?php echo ($activePage === 'recibos') ? 'active' : ''; ?>">
             <a href="recibos.php" class="menu-link">
               <i class="menu-icon tf-icons ti ti-arrow-big-down-filled"></i>
               <div data-i18n="Retiros">Retiros</div>
             </a>
           </li>
-          <!-- <li class="menu-item"><a href="billetes.php" class="menu-link"><i class="menu-icon fa fa-plane"></i> <span>Billetes</span></a></li> -->
-          <li class="menu-item"><a href="empleados.php" class="menu-link"><i class="menu-icon fa fa-users"></i><div data-i18n="Empleados">Empleados</div></a></li>
-          <li class="menu-item"><a href="#" class="menu-link"><i class="menu-icon fa fa-plane"></i><div data-i18n="Transacciones UV">Transacciones UV</div></a></li>
-          <li class="menu-item">
+          <!-- <li class="menu-item  <?php echo ($activePage === 'billetes') ? 'active' : ''; ?>"><a href="billetes.php" class="menu-link"><i class="menu-icon fa fa-plane"></i> <span>Billetes</span></a></li> -->
+          <li class="menu-item  <?php echo ($activePage === 'empleados') ? 'active' : ''; ?>"><a href="empleados.php" class="menu-link"><i class="menu-icon fa fa-users"></i><div data-i18n="Empleados">Empleados</div></a></li>
+          <li class="menu-item  <?php echo ($activePage === '#') ? 'active' : ''; ?>"><a href="#" class="menu-link"><i class="menu-icon fa fa-plane"></i><div data-i18n="Transacciones UV">Transacciones UV</div></a></li>
+          <li class="menu-item <?php echo ($activePage === 'bancos' || $activePage === 'banco_comercial' || $activePage === 'clientes' || $activePage === 'agencias' || $activePage === 'cuentas' || $activePage === 'cajas' || $activePage === 'tasas' || $activePage === 'contabilidad' || $activePage === 'solicitudes' || $activePage === 'paises' || $activePage === 'usuarios' || $activePage === 'permiso') ? 'active open' : ''; ?>">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon fa fa-cubes"></i>
               <div data-i18n="Administracion">Administracion</div>
             </a>
 
             <ul class="menu-sub">
-              <li class="menu-item"><a href="bancos.php" class="menu-link"><i class="menu-icon fa fa-bank"></i>Banco</a></li>
-              <li class="menu-item"><a href="banco_comercial.php" class="menu-link"><i class="menu-icon fa fa-cc-mastercard"></i> Comercial</a></li>
-              <li class="menu-item"><a href="clientes.php" class="menu-link"><i class="menu-icon fa fa-group "></i>Clientes</a></li>
-              <li class="menu-item"><a href="agencias.php" class="menu-link"><i class="menu-icon fa fa-home"></i>Agencias</a></li>
-              <li class="menu-item"><a href="cuentas.php" class="menu-link"><i class="menu-icon fa fa-bank"></i>Cuentas</a></li>
-              <li class="menu-item"><a href="cajas.php" class="menu-link"><i class="menu-icon fa fa-briefcase"></i>Cajas</a></li>
-              <li class="menu-item"><a href="tasas.php" class="menu-link"><i class="menu-icon fa fa-circle-o"></i>Tarifario envios</a></li>
-              <li class="menu-item"><a href="contabilidad.php" class="menu-link"><i class="menu-icon fa fa-file-excel-o"></i>Contabilidad</a></li>
-              <!-- <li class="menu-item"><a href="rutas.php" class="menu-link"><i class="menu-icon fa fa-circle-o"></i>Rutas de vuelos</a></li> -->
-              <li class="menu-item"><a href="solicitudes.php" class="menu-link"><i class="menu-icon fa fa-envelope-o"></i>Solicitudes</a></li>
-              <li class="menu-item"><a href="paises.php" class="menu-link"><i class="menu-icon fa fa-map-signs"></i>Paises</a></li>
-              <li class="menu-item"><a href="usuarios.php" class="menu-link"><i class="menu-icon fa fa-user"></i>Usuarios</a></li>
-              <li class="menu-item"><a href="permiso.php" class="menu-link"><i class="menu-icon fa fa-lock"></i>Permisos</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'bancos') ? 'active' : ''; ?>"><a href="bancos.php" class="menu-link"><i class="menu-icon fa fa-bank"></i>Banco</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'banco_comercial') ? 'active' : ''; ?>"><a href="banco_comercial.php" class="menu-link"><i class="menu-icon fa fa-cc-mastercard"></i> Comercial</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'clientes') ? 'active' : ''; ?>"><a href="clientes.php" class="menu-link"><i class="menu-icon fa fa-group "></i>Clientes</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'agencias') ? 'active' : ''; ?>"><a href="agencias.php" class="menu-link"><i class="menu-icon fa fa-home"></i>Agencias</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'cuentas') ? 'active' : ''; ?>"><a href="cuentas.php" class="menu-link"><i class="menu-icon fa fa-bank"></i>Cuentas</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'cajas') ? 'active' : ''; ?>"><a href="cajas.php" class="menu-link"><i class="menu-icon fa fa-briefcase"></i>Cajas</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'tasas') ? 'active' : ''; ?>"><a href="tasas.php" class="menu-link"><i class="menu-icon fa fa-circle-o"></i>Tarifario envios</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'contabilidad') ? 'active' : ''; ?>"><a href="contabilidad.php" class="menu-link"><i class="menu-icon fa fa-file-excel-o"></i>Contabilidad</a></li>
+              <!-- <li class="menu-item  <?php echo ($activePage === 'rutas') ? 'active' : ''; ?>"><a href="rutas.php" class="menu-link"><i class="menu-icon fa fa-circle-o"></i>Rutas de vuelos</a></li> -->
+              <li class="menu-item  <?php echo ($activePage === 'solicitudes') ? 'active' : ''; ?>"><a href="solicitudes.php" class="menu-link"><i class="menu-icon fa fa-envelope-o"></i>Solicitudes</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'paises') ? 'active' : ''; ?>"><a href="paises.php" class="menu-link"><i class="menu-icon fa fa-map-signs"></i>Paises</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'usuarios') ? 'active' : ''; ?>"><a href="usuarios.php" class="menu-link"><i class="menu-icon fa fa-user"></i>Usuarios</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'permiso') ? 'active' : ''; ?>"><a href="permiso.php" class="menu-link"><i class="menu-icon fa fa-lock"></i>Permisos</a></li>
             </ul>
           </li>
-          <li class="menu-item">
+          <li class="menu-item  <?php echo ($activePage === 'consultas_envios' || $activePage === 'consultas_recibos' || $activePage === 'consultas_operaciones') ? 'active open' : ''; ?>">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon fa fa-bar-chart"></i>
               <div data-i18n="Consultas">Consultas</div>
             </a>
 
             <ul class="menu-sub">
-              <li class="menu-item"><a href="consultas_envios.php" class="menu-link"><i class="menu-icon fa fa-send"></i>Envios</a></li>
-              <li class="menu-item"><a href="consultas_recibos.php" class="menu-link"><i class="menu-icon fa fa-arrow-circle-o-down"></i>Retiros</a></li>
-              <li class="menu-item"><a href="consultas_operaciones.php" class="menu-link"><i class="menu-icon fa fa-book"></i>Operaciones</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'consultas_envios') ? 'active' : ''; ?>"><a href="consultas_envios.php" class="menu-link"><i class="menu-icon fa fa-send"></i>Envios</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'consultas_recibos') ? 'active' : ''; ?>"><a href="consultas_recibos.php" class="menu-link"><i class="menu-icon fa fa-arrow-circle-o-down"></i>Retiros</a></li>
+              <li class="menu-item  <?php echo ($activePage === 'consultas_operaciones') ? 'active' : ''; ?>"><a href="consultas_operaciones.php" class="menu-link"><i class="menu-icon fa fa-book"></i>Operaciones</a></li>
             </ul>
           </li>
-          <li class="menu-item">
+          <li class="menu-item  <?php echo ($activePage === '#') ? 'active' : ''; ?>">
             <a href="javascript:alert('Contacte con el Soporte tecnico desarrolladores de la aplicación')" class="menu-link">
               <i class="menu-icon fa fa-plus-square"></i>
               <div data-i18n="Ayuda">Ayuda</div>
               <div class="badge bg-danger rounded-pill ms-auto">PDF</div>
             </a>
           </li>
-          <li class="menu-item">
+          <li class="menu-item  <?php echo ($activePage === '#') ? 'active' : ''; ?>">
             <a href="#" class="menu-link">
               <i class="menu-icon fa fa-info-circle"></i>
               <div data-i18n="Acerca De...">Acerca De...</div>
@@ -267,8 +270,32 @@
                     </ul>
                   </li>
                   <!--/ Language -->
-                  
 
+                  <!-- Style Switcher -->
+                  <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
+                    <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                      <i class='ti ti-md ti-sun'></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-styles">
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0);" data-theme="light">
+                          <span class="align-middle"><i class='ti ti-sun me-2'></i>Light</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
+                          <span class="align-middle"><i class="ti ti-moon me-2"></i>Dark</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
+                          <span class="align-middle"><i class="ti ti-device-desktop me-2"></i>System</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- / Style Switcher-->
+                  
                   <!-- Notification -->
                   <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
                     <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">

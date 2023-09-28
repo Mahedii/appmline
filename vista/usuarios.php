@@ -60,11 +60,11 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>AP o Login *:</label>
-                      <input type="text" readonly="" class="form-control" name="apU" id="apU" maxlength="20" placeholder="Logion o AP" required>
+                      <input type="text" readonly="" class="form-control rounded-pill" name="apU" id="apU" maxlength="20" placeholder="Logion o AP" required>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Clave temporal *:</label>
-                      <input type="password" class="form-control" name="password" id="password" maxlength="20" placeholder="Contraseña" required>
+                      <input type="password" class="form-control rounded-pill" name="password" id="password" maxlength="20" placeholder="Contraseña" required>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Estado:</label>

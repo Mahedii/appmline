@@ -49,7 +49,9 @@
   <!-- Vendors JS -->
   <script src="../public/dist/assets/vendor/libs/apex-charts/apexcharts.js"></script>
   <script src="../public/dist/assets/vendor/libs/swiper/swiper.js"></script>
-  <!-- <script src="../public/dist/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script> -->
+
+  <!-- <script src="../public/dist/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+  <script src="../public/dist/assets/js/tables-datatables-basic.js"></script> -->
 
   <!--datatable js-->
   <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>

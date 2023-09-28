@@ -45,11 +45,11 @@ if (!isset($_SESSION["ap"])) {
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Nombre:</label>
                       <input type="hidden" name="idruta" id="idruta">
-                      <input type="text" class="form-control" name="nombreR" id="nombreR" maxlength="25" placeholder="Nombre ruta" required>
+                      <input type="text" class="form-control rounded-pill" name="nombreR" id="nombreR" maxlength="25" placeholder="Nombre ruta" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Descripción:</label>
-                      <input type="text" class="form-control" name="descripcionr" id="descripcionr" maxlength="30" placeholder="Descripción ruta" required>
+                      <input type="text" class="form-control rounded-pill" name="descripcionr" id="descripcionr" maxlength="30" placeholder="Descripción ruta" required>
                     </div>
                   </div>
 

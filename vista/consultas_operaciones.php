@@ -25,15 +25,15 @@ if (!isset($_SESSION["ap"])) {
                 <div class="row g-3 py-3 mb-2">
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <label>Fecha de inicio</label>
-                    <input type="date" class="form-control" name="fecha_inicio" id="fecha_inicio" value="<?php echo date("Y-m-d"); ?>">
+                    <input type="date" class="form-control rounded-pill" name="fecha_inicio" id="fecha_inicio" value="<?php echo date("Y-m-d"); ?>">
                   </div>
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <label>Fecha de fin</label>
-                    <input type="date" class="form-control" name="fecha_final" id="fecha_final" value="<?php echo date("Y-m-d"); ?>">
+                    <input type="date" class="form-control rounded-pill" name="fecha_final" id="fecha_final" value="<?php echo date("Y-m-d"); ?>">
                   </div>
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <label>Tipo de operacion (*):</label>
-                    <select class="form-control js-example-basic-single" name="codigo_ope" id="codigo_ope">
+                    <select class="form-control rounded-pill js-example-basic-single" name="codigo_ope" id="codigo_ope">
                       <option value="">TODOS</option>
                       <option value="002">RECARGA UV AGENCIA</option>
                       <option value="003">RESTITUIR UV AGENCIA</option>
@@ -46,12 +46,12 @@ if (!isset($_SESSION["ap"])) {
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <label>Agencia</label>
-                    <select class="form-control js-example-basic-single" name="agencia" id="agencia" required>
+                    <select class="form-control rounded-pill js-example-basic-single" name="agencia" id="agencia" required>
                     </select>
                   </div>
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <label>Empleado</label>
-                    <select class="form-control js-example-basic-single" name="ap" id="ap" required>
+                    <select class="form-control rounded-pill js-example-basic-single" name="ap" id="ap" required>
                     </select>
                   </div>
 

@@ -55,11 +55,11 @@ if (!isset($_SESSION["ap"])) {
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Concepto u observacion:</label>
                       <input type="hidden" name="iding_gas" id="iding_gas">
-                      <input type="text" class="form-control" name="concepto" id="concepto" maxlength="45" placeholder="Concepto contable" required>
+                      <input type="text" class="form-control rounded-pill" name="concepto" id="concepto" maxlength="45" placeholder="Concepto contable" required>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Monto:</label>
-                      <input type="number" class="form-control" name="monto" id="monto" maxlength="10" required>
+                      <input type="number" class="form-control rounded-pill" name="monto" id="monto" maxlength="10" required>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Movimiento:</label>
@@ -70,11 +70,11 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Fecha:</label>
-                      <input type="date" class="form-control" name="fecrea" id="fecrea" required>
+                      <input type="date" class="form-control rounded-pill" name="fecrea" id="fecrea" required>
                     </div>
                     <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                       <label>Observación:</label>
-                      <input type="text" class="form-control" name="observacion" id="observacion" maxlength="45" placeholder="Observación contable" required>
+                      <input type="text" class="form-control rounded-pill" name="observacion" id="observacion" maxlength="45" placeholder="Observación contable" required>
                     </div>
                   </div>
 

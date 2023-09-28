@@ -45,7 +45,7 @@ if (!isset($_SESSION["ap"])) {
                   </tfoot>
                 </table>
               </div>
-              <div class="panel-body" style="height: 400px;" id="formularioregistros">
+              <div id="formularioregistros">
                 <form name="formulario" id="formulario" method="POST">
                   <input type="hidden" name="ap" id="ap">
                   <input type="hidden" name="idempleado" id="idempleado">
@@ -54,7 +54,7 @@ if (!isset($_SESSION["ap"])) {
                       <div class="form-password-toggle">
                         <label class="form-label" for="multicol-password">Nueva contraseña *:</label>
                         <div class="input-group input-group-merge">
-                          <input type="password" class="form-control" name="nuevaPass" id="nuevaPass" maxlength="20" placeholder="Contraseña nueva" required>
+                          <input type="password" class="form-control rounded-pill" name="nuevaPass" id="nuevaPass" maxlength="20" placeholder="Contraseña nueva" required>
                           <span class="input-group-text cursor-pointer" id="multicol-password2"><i class="ti ti-eye-off"></i></span>
                         </div>
                       </div>
@@ -63,7 +63,7 @@ if (!isset($_SESSION["ap"])) {
                       <div class="form-password-toggle">
                         <label class="form-label" for="multicol-confirm-password">Confirmar contraseña *:</label>
                         <div class="input-group input-group-merge">
-                          <input type="password" class="form-control" name="nuevaPassConfirma" id="nuevaPassConfirma" maxlength="20" placeholder="Confirmar contraseña" required>
+                          <input type="password" class="form-control rounded-pill" name="nuevaPassConfirma" id="nuevaPassConfirma" maxlength="20" placeholder="Confirmar contraseña" required>
                           <span class="input-group-text cursor-pointer" id="multicol-confirm-password2"><i class="ti ti-eye-off"></i></span>
                         </div>
                       </div>
@@ -78,8 +78,8 @@ if (!isset($_SESSION["ap"])) {
               </div>
             </div>
           </div>
-        </div><!--end col-->
-      </div><!--end row-->
+        </div>
+      </div>
 
     </div>
     <!-- FIN CONTENIDO -->

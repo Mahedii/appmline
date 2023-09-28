@@ -70,51 +70,51 @@ if (!isset($_SESSION["ap"])) {
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Nombre pais (*):</label>
                       <input type="hidden" name="idpais" id="idpais">
-                      <input type="text" class="form-control" name="nompais" id="nompais" maxlength="45" placeholder="Nombre del pais" required>
+                      <input type="text" class="form-control rounded-pill" name="nompais" id="nompais" maxlength="45" placeholder="Nombre del pais" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Descripcion:</label>
-                      <input type="text" class="form-control" name="descripcion" id="descripcion" maxlength="50" placeholder="Descripcion del pais" required>
+                      <input type="text" class="form-control rounded-pill" name="descripcion" id="descripcion" maxlength="50" placeholder="Descripcion del pais" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Limite envio LOCAL:</label>
-                      <input type="text" class="form-control" name="limienviolocal" id="limitenviolocal" maxlength="20" placeholder="Limite envio LOCAL" required>
+                      <input type="text" class="form-control rounded-pill" name="limienviolocal" id="limitenviolocal" maxlength="20" placeholder="Limite envio LOCAL" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Limite envio INT.:</label>
-                      <input type="text" class="form-control" name="limienvioint" id="limitenvioint" maxlength="20" placeholder="Limite envio INTERNACIONAL" required>
+                      <input type="text" class="form-control rounded-pill" name="limienvioint" id="limitenvioint" maxlength="20" placeholder="Limite envio INTERNACIONAL" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Moneda (*):</label>
-                      <input type="text" class="form-control" name="moneda" id="moneda" maxlength="20" placeholder="Moneda ej: XAF" required>
+                      <input type="text" class="form-control rounded-pill" name="moneda" id="moneda" maxlength="20" placeholder="Moneda ej: XAF" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>IVA (*):</label>
-                      <input type="text" class="form-control" name="iva" id="iva" maxlength="20" placeholder="IVA" required>
+                      <input type="text" class="form-control rounded-pill" name="iva" id="iva" maxlength="20" placeholder="IVA" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>% de Envio (*):</label>
-                      <input type="text" class="form-control" name="porcenenvio" id="porcenenvio" maxlength="20" placeholder="Porcentaje de envio" required>
+                      <input type="text" class="form-control rounded-pill" name="porcenenvio" id="porcenenvio" maxlength="20" placeholder="Porcentaje de envio" required>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>% de recibir (*):</label>
-                      <input type="text" class="form-control" name="porcenrecibir" id="porcenrecibir" maxlength="20" placeholder="Porcentqje de recibir" required>
+                      <input type="text" class="form-control rounded-pill" name="porcenrecibir" id="porcenrecibir" maxlength="20" placeholder="Porcentqje de recibir" required>
                     </div>
                     <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>% envio PAQ (*):</label>
-                      <input type="text" class="form-control" name="porcenenviopaq" id="porcenenviopaq" maxlength="20" placeholder="Porcentaje de envio de PAQUETE" required>
+                      <input type="text" class="form-control rounded-pill" name="porcenenviopaq" id="porcenenviopaq" maxlength="20" placeholder="Porcentaje de envio de PAQUETE" required>
                     </div>
                     <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>% recibir PAQ (*):</label>
-                      <input type="text" class="form-control" name="porcenrecibirpaq" id="porcenrecibirpaq" maxlength="20" placeholder="Porcentaje de recibir un PAQUETE" required>
+                      <input type="text" class="form-control rounded-pill" name="porcenrecibirpaq" id="porcenrecibirpaq" maxlength="20" placeholder="Porcentaje de recibir un PAQUETE" required>
                     </div>
                     <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Partner API:</label>
-                      <input type="text" class="form-control" name="partnerapi" id="partnerapi" maxlength="20" placeholder="Partner API">
+                      <input type="text" class="form-control rounded-pill" name="partnerapi" id="partnerapi" maxlength="20" placeholder="Partner API">
                     </div>
                     <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Prefijo telefonico(*):</label>
-                      <input type="text" class="form-control" name="prefijoTel" id="prefijoTel" maxlength="20" placeholder="Prefijo tel +240" required>
+                      <input type="text" class="form-control rounded-pill" name="prefijoTel" id="prefijoTel" maxlength="20" placeholder="Prefijo tel +240" required>
                     </div>
                   </div>
 

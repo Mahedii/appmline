@@ -65,15 +65,15 @@ if (!isset($_SESSION["ap"])) {
                     <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Nombre pasajero:</label>
                       <input type="hidden" name="idbillete" id="idbillete">
-                      <input type="text" class="form-control" name="nompasa" id="nompasa" maxlength="45" placeholder="Nombre del pasajero" required>
+                      <input type="text" class="form-control rounded-pill" name="nompasa" id="nompasa" maxlength="45" placeholder="Nombre del pasajero" required>
                     </div>
                     <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>DOC. Pasajero:</label>
-                      <input type="text" class="form-control" name="DNIremitente" id="DNIremitente" maxlength="10" placeholder="Documento del pasajero" required>
+                      <input type="text" class="form-control rounded-pill" name="DNIremitente" id="DNIremitente" maxlength="10" placeholder="Documento del pasajero" required>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Compañía:</label>
-                      <input type="text" class="form-control" name="company" id="company" maxlength="20" placeholder="Nombre compañia" required>
+                      <input type="text" class="form-control rounded-pill" name="company" id="company" maxlength="20" placeholder="Nombre compañia" required>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Ruta:</label>
@@ -82,27 +82,27 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Nº Vuelo:</label>
-                      <input type="text" class="form-control" name="numvuel" id="numvuel" maxlength="10" placeholder="Numero del vuelo" required>
+                      <input type="text" class="form-control rounded-pill" name="numvuel" id="numvuel" maxlength="10" placeholder="Numero del vuelo" required>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Fecha emision:</label>
-                      <input type="date" class="form-control" name="fechaemision" id="fechaemision" placeholder="Fecha de emisión" required>
+                      <input type="date" class="form-control rounded-pill" name="fechaemision" id="fechaemision" placeholder="Fecha de emisión" required>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Fecha salida:</label>
-                      <input type="date" class="form-control" name="fesali" id="fesali" placeholder="Fecha de salida" required>
+                      <input type="date" class="form-control rounded-pill" name="fesali" id="fesali" placeholder="Fecha de salida" required>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Fecha vuelta:</label>
-                      <input type="date" class="form-control" name="fevuel" id="fevuel" placeholder="Fecha vuelta" required>
+                      <input type="date" class="form-control rounded-pill" name="fevuel" id="fevuel" placeholder="Fecha vuelta" required>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Localizador:</label>
-                      <input type="text" class="form-control" name="localiz" id="localiz" maxlength="22" placeholder="Localizador" required>
+                      <input type="text" class="form-control rounded-pill" name="localiz" id="localiz" maxlength="22" placeholder="Localizador" required>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Precio:</label>
-                      <input type="text" class="form-control" name="precio" id="precio" maxlength="10" placeholder="Precio del billete" required>
+                      <input type="text" class="form-control rounded-pill" name="precio" id="precio" maxlength="10" placeholder="Precio del billete" required>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
                       <label>Agencia:</label>
@@ -111,7 +111,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                       <label>Descripción:</label>
-                      <input type="text" class="form-control" name="descripcion" id="descripcion" maxlength="45" placeholder="Descripción" required>
+                      <input type="text" class="form-control rounded-pill" name="descripcion" id="descripcion" maxlength="45" placeholder="Descripción" required>
                     </div>
                   </div>
 

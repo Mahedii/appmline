@@ -70,23 +70,23 @@ if (!isset($_SESSION["ap"])) {
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Nombre completo (*)</label>
                       <input type="hidden" name="idempleado" id="idempleado">
-                      <input type="text" class="form-control" name="nomcompleto" id="nomcompleto" maxlength="55" placeholder="Nombre del empleado" required>
+                      <input type="text" class="form-control rounded-pill" name="nomcompleto" id="nomcompleto" maxlength="55" placeholder="Nombre del empleado" required>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>DNI (*):</label>
-                      <input onmouseout="validarDIP()" type="number" class="form-control" name="DNIremitente" id="DNIremitente" maxlength="10" placeholder="DNI del empleado" required>
+                      <input onmouseout="validarDIP()" type="number" class="form-control rounded-pill" name="DNIremitente" id="DNIremitente" maxlength="10" placeholder="DNI del empleado" required>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Telefono:</label>
-                      <input type="text" class="form-control" name="tel" id="tel" maxlength="22" placeholder="Telefono del empleado">
+                      <input type="text" class="form-control rounded-pill" name="tel" id="tel" maxlength="22" placeholder="Telefono del empleado">
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Funciones:</label>
-                      <input type="text" class="form-control" name="cargo" id="cargo" maxlength="22" placeholder="Cargo del empleado">
+                      <input type="text" class="form-control rounded-pill" name="cargo" id="cargo" maxlength="22" placeholder="Cargo del empleado">
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Salario:</label>
-                      <input type="text" class="form-control" name="salario" id="salario" maxlength="12" placeholder="Salario" required>
+                      <input type="text" class="form-control rounded-pill" name="salario" id="salario" maxlength="12" placeholder="Salario" required>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Rol (Tipo usuario):</label>
@@ -101,7 +101,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Login acceso:</label>
-                      <input onmouseout="validarAP()" type="text" class="form-control" name="ap" id="ap" maxlength="8" placeholder="Login usuario, Ej. ap001531" required>
+                      <input onmouseout="validarAP()" type="text" class="form-control rounded-pill" name="ap" id="ap" maxlength="8" placeholder="Login usuario, Ej. ap001531" required>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Pais de trabajo:</label>
@@ -110,11 +110,11 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Ciudad:</label>
-                      <input type="text" class="form-control" name="ciudad" id="ciudad" maxlength="45" placeholder="Ciudad que vive">
+                      <input type="text" class="form-control rounded-pill" name="ciudad" id="ciudad" maxlength="45" placeholder="Ciudad que vive">
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Dirección:</label>
-                      <input type="text" class="form-control" name="direccion" id="direccion" maxlength="45" placeholder="Descripción" required>
+                      <input type="text" class="form-control rounded-pill" name="direccion" id="direccion" maxlength="45" placeholder="Descripción" required>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Trabaja Interno?:</label>
@@ -125,7 +125,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Fecha reclutado:</label>
-                      <input type="date" class="form-control" name="feinicioempleo" id="feinicioempleo">
+                      <input type="date" class="form-control rounded-pill" name="feinicioempleo" id="feinicioempleo">
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Agencia de trabajo:</label>
