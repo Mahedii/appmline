@@ -71,8 +71,8 @@ if (!isset($_SESSION["ap"])) {
                   </div>
                   <hr class="my-4 mx-n4" />
                   <div class="pt-4">
-                    <button class="btn btn-success me-sm-3 me-1" onmouseover="" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Cambiar</button>
-                    <button class="btn btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                    <button class="btn rounded-pill  btn-success me-sm-3 me-1" onmouseover="" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Cambiar</button>
+                    <button class="btn rounded-pill  btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                   </div>
                 </form>
               </div>

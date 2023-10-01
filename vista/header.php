@@ -22,11 +22,6 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="../public/dist/css/bootstrap-select.min.css"> -->
     <!-- <link rel="stylesheet" href="../public/dist/assets/vendor/libs/select2/select2.css" /> -->
-    <style>
-      .select2-container {
-          display: block;
-      }
-    </style>
 
     <!-- Icons -->
     <link rel="stylesheet" href="../public/dist/assets/vendor/fonts/fontawesome.css" />
@@ -42,8 +37,11 @@
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/node-waves/node-waves.css" />
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/typeahead-js/typeahead.css" /> 
+    <link rel="stylesheet" href="../public/dist/assets/vendor/libs/flatpickr/flatpickr.css" />
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/apex-charts/apex-charts.css" />
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/swiper/swiper.css" />
+
+    <link rel="stylesheet" href="../public/dist/assets/vendor/libs/select2/select2.css" />
 
     <!-- <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
@@ -58,6 +56,18 @@
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="../public/dist/assets/vendor/css/pages/cards-advance.css" />
+
+    <style>
+      /* .select2-container {
+          display: block;
+      } */
+      .select2-container--default .select2-selection--single .select2-selection__arrow b {
+          border-style: none;
+      }
+      .offcanvas,.offcanvas-xxl,.offcanvas-xl,.offcanvas-lg,.offcanvas-md,.offcanvas-sm {
+          --bs-offcanvas-width: 500px;
+      }
+    </style>
     
 
     <!-- Helpers -->
@@ -65,7 +75,7 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../public/dist/assets/js/config.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     
 </head>
 

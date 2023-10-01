@@ -52,6 +52,7 @@
 
   <!-- <script src="../public/dist/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
   <script src="../public/dist/assets/js/tables-datatables-basic.js"></script> -->
+  <script src="../public/dist/assets/js/offcanvas-modal.js"></script> 
 
   <!--datatable js-->
   <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -67,20 +68,23 @@
   <script src="../public/dist/assets/js/datatables.init.js"></script>
 
   
-  <!-- <script src="../public/dist/assets/vendor/libs/cleavejs/cleave.js"></script>
+  <script src="../public/dist/assets/vendor/libs/cleavejs/cleave.js"></script>
   <script src="../public/dist/assets/vendor/libs/cleavejs/cleave-phone.js"></script>
   <script src="../public/dist/assets/vendor/libs/moment/moment.js"></script>
-  <script src="../public/dist/assets/vendor/libs/flatpickr/flatpickr.js"></script> -->
+  <script src="../public/dist/assets/vendor/libs/flatpickr/flatpickr.js"></script>
 
   <script src="../public/dist/js/bootstrap-select.min.js"></script>
-  <!--select2 cdn-->
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-  <script src="../public/dist/assets/js/select2.init.js"></script>
-  <!-- <script src="../public/dist/assets/vendor/libs/select2/select2.js"></script> -->
+  <!--select2 cdn-->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+
+  <!-- <script src="../public/dist/assets/js/select2.init.js"></script> -->
+  <script src="../public/dist/assets/vendor/libs/select2/select2.js"></script>
 
   <!-- Main JS -->
   <script src="../public/dist/assets/js/main.js"></script>
+
+  <script src="../public/dist/assets/js/form-layouts.js"></script>
   
   <!-- Page JS -->
   <!-- <script src="../public/dist/assets/js/dashboards-analytics.js"></script> -->

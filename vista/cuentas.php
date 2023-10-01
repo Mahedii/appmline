@@ -15,7 +15,7 @@ if (!isset($_SESSION["ap"])) {
         <h4 class="mb-sm-0 me-2">Cuentas</h4>
         <div class="action-btns">
           <?php if ($_SESSION['rol'] != 'Agencia' || $_SESSION['rol'] != 'CajeroUV') { ?>
-            <small><button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></small>
+            <small><button class="btn rounded-pill  btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></small>
           <?php } ?>
         </div>
       </div>
@@ -68,22 +68,22 @@ if (!isset($_SESSION["ap"])) {
                   <div class="pt-4 mb-3">
                     <?php if ($_SESSION['rol'] != 'Agencia') { // VALIDACION DE ROLES 
                     ?>
-                      <button class="btn btn-success" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
+                      <button class="btn rounded-pill  btn-success" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
                     <?php  } ?>
-                    <button class="btn btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                    <button class="btn rounded-pill  btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                   </div>
 
                   <div class="row g-3">
 
                     <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Nombre cliente o Gerente (*) :</label>
-                      <select class="js-example-basic-single" name="cliente" id="cliente" required>
+                      <select class="select2 form-select rounded-pill" name="cliente" id="cliente" required>
                       </select>
                       <input type="hidden" name="modif" id="modif">
                     </div>
                     <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Tipo de cuenta (*):</label>
-                      <select onchange="generarCuentaClienteNCP(value)" class="js-example-basic-single" name="tipo_cuenta" id="tipo_cuenta">
+                      <select onchange="generarCuentaClienteNCP(value)" class="select2 form-select rounded-pill" name="tipo_cuenta" id="tipo_cuenta">
                         <option value="CUENTA_CORRIENTE">ELIJE TIPO DE CUENTA</option>
                         <option value="CUENTA_CORRIENTE">CUENTA CORRIENTE</option>
                         <option value="CUENTA_AHORRO">CUENTA DE AHORROS</option>
@@ -105,17 +105,17 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Agencia Master Ligada :</label>
-                      <select class="js-example-basic-single" name="agencialigada" id="agencialigada">
+                      <select class="select2 form-select rounded-pill" name="agencialigada" id="agencialigada">
                       </select>
                     </div>
                     <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Gestor :</label>
-                      <select class="js-example-basic-single" name="gestor" id="gestor">
+                      <select class="select2 form-select rounded-pill" name="gestor" id="gestor">
                       </select>
                     </div>
                     <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Cuenta cerrada :</label>
-                      <select class="js-example-basic-single" name="cuenta_cerrada" id="cuenta_cerrada">
+                      <select class="select2 form-select rounded-pill" name="cuenta_cerrada" id="cuenta_cerrada">
                         <option value="NO">NO</option>
                         <option value="SI">SI</option>
                       </select>

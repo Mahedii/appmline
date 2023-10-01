@@ -17,7 +17,7 @@ if (!isset($_SESSION["ap"])) {
         <h4 class="mb-sm-0 me-2"><i class="fa fa-bank"> </i> Banco</h4>
         <div class="action-btns">
           <?php if ($_SESSION['rol'] != 'Agencia' || $_SESSION['rol'] != 'CajeroUV' || $_SESSION['rol'] != 'Administrador') { ?>
-            <small><button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></small>
+            <small><button class="btn rounded-pill  btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></small>
           <?php } ?>
         </div>
       </div>
@@ -69,10 +69,10 @@ if (!isset($_SESSION["ap"])) {
                   <div class="pt-4 mb-3">
                     <?php if ($_SESSION['rol'] != 'Administrador' || $_SESSION['rol'] != 'Agencia' || $_SESSION['rol'] != 'Cajero') { // VALIDACION DE ROLES 
                     ?>
-                      <button class="btn btn-success me-sm-3 me-1" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
-                      <button class="btn btn-dark" type="button" id="btnDebitar" onclick="MODALOperarBanco(), traerSaldoActual()"> <i class="fa fa-minus-square"></i> </i> Crear UV o Capital <i class="fa fa-plus-square"> </i></button>
+                      <button class="btn rounded-pill  btn-success me-sm-3 me-1" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
+                      <button class="btn rounded-pill  btn-dark" type="button" id="btnDebitar" onclick="MODALOperarBanco(), traerSaldoActual()"> <i class="fa fa-minus-square"></i> </i> Crear UV o Capital <i class="fa fa-plus-square"> </i></button>
                     <?php  } ?>
-                    <button class="btn btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                    <button class="btn rounded-pill  btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                   </div>
                   <div class="row g-3">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -86,7 +86,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Pais (*):</label>
-                      <select class="js-example-basic-single" name="pais" id="pais" required>
+                      <select class="select2 form-select rounded-pill" name="pais" id="pais" required>
                       </select>
                     </div>
                     <div class="col-lg-6 col-6 md-6 col-sm-6 col-xs-12">
@@ -95,7 +95,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                       <label>Responsable (*):</label>
-                      <select class="js-example-basic-single" name="responsable" id="responsable" onchange="generarNCPCreaBanco(value)" required>
+                      <select class="select2 form-select rounded-pill" name="responsable" id="responsable" onchange="generarNCPCreaBanco(value)" required>
                       </select>
                     </div>
 
@@ -161,8 +161,8 @@ if (!isset($_SESSION["ap"])) {
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button class="btn btn-success" type="submit" onclick="CrearSaldoUV(event)" id="btnGuardarOpeBanco"><i class="fa fa-save"></i> Validar</button>
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                      <button class="btn rounded-pill  btn-success" type="submit" onclick="CrearSaldoUV(event)" id="btnGuardarOpeBanco"><i class="fa fa-save"></i> Validar</button>
+                      <button type="button" class="btn rounded-pill  btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
                   </div>
                 </div>

@@ -14,7 +14,7 @@ if (!isset($_SESSION["ap"])) {
       <div class="sticky-element d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
         <h4 class="mb-sm-0 me-2">Clientes</h4>
         <div class="action-btns">
-          <button class="btn btn-success me-3" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button>
+          <button class="btn rounded-pill  btn-success me-3" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button>
         </div>
       </div>
 
@@ -77,7 +77,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Pais (*):</label>
-                      <select class="js-example-basic-single" name="pais" id="pais" required>
+                      <select class="select2 form-select rounded-pill" name="pais" id="pais" required>
                       </select>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -86,7 +86,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Agencia :</label>
-                      <select class="js-example-basic-single" name="agencia_cli" id="agencia_cli" required>
+                      <select class="select2 form-select rounded-pill" name="agencia_cli" id="agencia_cli" required>
                       </select>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -95,7 +95,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Estado:</label>
-                      <select class="js-example-basic-single" name="estado" id="estado">
+                      <select class="select2 form-select rounded-pill" name="estado" id="estado">
                         <option value="1">Activo</option>
                         <option value="2">Suspendido</option>
                       </select>
@@ -103,8 +103,8 @@ if (!isset($_SESSION["ap"])) {
 
                   </div>
                   <div class="pt-4 mb-3">
-                    <button class="btn btn-success" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
-                    <button class="btn btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                    <button class="btn rounded-pill  btn-success" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
+                    <button class="btn rounded-pill  btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                   </div>
                 </form>
               </div>

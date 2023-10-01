@@ -15,7 +15,7 @@ if (!isset($_SESSION["ap"])) {
         <h4 class="mb-sm-0 me-2">Agencias</h4>
         <div class="action-btns">
           <?php if ($_SESSION['rol'] != 'Agencia' || $_SESSION['rol'] != 'CajeroUV') { ?>
-            <small><button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></small>
+            <small><button class="btn rounded-pill  btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></small>
           <?php } ?>
         </div>
       </div>
@@ -69,10 +69,10 @@ if (!isset($_SESSION["ap"])) {
                   <div class="pt-4 mb-3">
                     <?php if ($_SESSION['rol'] != 'Agencia') { // VALIDACION DE ROLES 
                     ?>
-                      <button onmouseout="generarCuentaAgencia()" class="btn btn-success" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
-                      <button class="btn btn-dark" type="button" id="btnDebitar" onclick="MODALOperarAgencia()"> <i class="fa fa-minus-square"></i> <i class="fa fa-reply-all"> </i> C-D Comisiones Agencia <i class="fa fa-plus-square"> </i></button>
+                      <button onmouseout="generarCuentaAgencia()" class="btn rounded-pill  btn-success" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
+                      <button class="btn rounded-pill  btn-dark" type="button" id="btnDebitar" onclick="MODALOperarAgencia()"> <i class="fa fa-minus-square"></i> <i class="fa fa-reply-all"> </i> C-D Comisiones Agencia <i class="fa fa-plus-square"> </i></button>
                     <?php  } ?>
-                    <button class="btn btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                    <button class="btn rounded-pill  btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                   </div>
 
                   <div class="row g-3">
@@ -88,7 +88,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Pais (*):</label>
-                      <select class="js-example-basic-single" name="pais" id="pais" required>
+                      <select class="select2 form-select rounded-pill" name="pais" id="pais" required>
                       </select>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -101,12 +101,12 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Gerente de la agencia X (*):</label>
-                      <select class="js-example-basic-single" name="responsable" id="responsable" onchange="generarCuentaAgencia()" required>
+                      <select class="select2 form-select rounded-pill" name="responsable" id="responsable" onchange="generarCuentaAgencia()" required>
                       </select>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Responsable Mline:</label>
-                      <select class="js-example-basic-single" name="responsableMline" id="responsableMline">
+                      <select class="select2 form-select rounded-pill" name="responsableMline" id="responsableMline">
                       </select>
                     </div>
 
@@ -135,7 +135,7 @@ if (!isset($_SESSION["ap"])) {
                       <form name="formularioOperarAgencia" id="formularioOperarAgencia" method="POST">
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Nombre cliente remitente (*) :</label>
-                          <select onchange="ponerNCPclienteRemitente()" class="js-example-basic-single" name="clienteremitente" id="clienteremitente" required>
+                          <select onchange="ponerNCPclienteRemitente()" class="select2 form-select rounded-pill" name="clienteremitente" id="clienteremitente" required>
                           </select>
                           <input type="hidden" name="idAgenciaOP" id="idAgenciaOP">
                           <input type="hidden" name="paisorigen" id="paisorigen">
@@ -143,30 +143,30 @@ if (!isset($_SESSION["ap"])) {
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Agencia Master remitente :</label>
-                          <select class="js-example-basic-single" name="agenciaremitente" id="agenciaremitente">
+                          <select class="select2 form-select rounded-pill" name="agenciaremitente" id="agenciaremitente">
                           </select>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Cuenta A DEBITAR remitente(*):</label>
-                          <select class="js-example-basic-single" name="ncpremitente" id="ncpremitente" required>
+                          <select class="select2 form-select rounded-pill" name="ncpremitente" id="ncpremitente" required>
                           </select>
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Nombre cliente beneficiario(*):</label>
-                          <select onchange="ponerNCPclienteBeneficiario()" class="js-example-basic-single" name="clientebeneficiario" id="clientebeneficiario" required>
+                          <select onchange="ponerNCPclienteBeneficiario()" class="select2 form-select rounded-pill" name="clientebeneficiario" id="clientebeneficiario" required>
                           </select>
                           <input type="hidden" name="paisdestino" id="paisdestino">
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Agencia Master beneficiaria :</label>
-                          <select class="js-example-basic-single" name="agenciabeneficiaria" id="agenciabeneficiaria" required>
+                          <select class="select2 form-select rounded-pill" name="agenciabeneficiaria" id="agenciabeneficiaria" required>
                           </select>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Cuenta A CREDITAR beneficiaria (*):</label>
-                          <select onchange="traerSaldoActual(this.value)" class="js-example-basic-single" name="ncpbeneficiaria" id="ncpbeneficiaria" required>
+                          <select onchange="traerSaldoActual(this.value)" class="select2 form-select rounded-pill" name="ncpbeneficiaria" id="ncpbeneficiaria" required>
                           </select>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -175,7 +175,7 @@ if (!isset($_SESSION["ap"])) {
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                           <label>Tipo de operacion (*):</label>
-                          <select onchange="" class="js-example-basic-single" name="tipo" id="tipo">
+                          <select onchange="" class="select2 form-select rounded-pill" name="tipo" id="tipo">
                             <option value="3">Recarga UV o Saldo</option>
                             <option value="4">Restituir UV o Saldo</option>
                             <option value="5">Retiro comisiones</option>
@@ -189,8 +189,8 @@ if (!isset($_SESSION["ap"])) {
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button class="btn btn-success" type="submit" onmouseover="verificarNCP()" onclick="debitarCreditarAgencia(event)" id="btnGuardarOpeAgencia"><i class="fa fa-save"></i> Validar</button>
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                      <button class="btn rounded-pill  btn-success" type="submit" onmouseover="verificarNCP()" onclick="debitarCreditarAgencia(event)" id="btnGuardarOpeAgencia"><i class="fa fa-save"></i> Validar</button>
+                      <button type="button" class="btn rounded-pill  btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
                   </div>
                 </div>

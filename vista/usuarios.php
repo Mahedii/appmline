@@ -14,7 +14,7 @@ if (!isset($_SESSION["ap"])) {
       <div class="sticky-element d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
         <h4 class="mb-sm-0 me-2">Crear usuarios y dar permisos</h4>
         <div class="action-btns">
-          <small><button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></small>
+          <small><button class="btn rounded-pill  btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></small>
         </div>
       </div>
 
@@ -55,7 +55,7 @@ if (!isset($_SESSION["ap"])) {
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <input type="hidden" name="idempleado" id="idempleado">
                       <label>Empleado:</label>
-                      <select class="js-example-basic-single" name="ap" id="ap" required>
+                      <select class="select2 form-select rounded-pill" name="ap" id="ap" required>
                       </select>
                     </div>
                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
@@ -82,8 +82,8 @@ if (!isset($_SESSION["ap"])) {
                   </div>
 
                   <div class="pt-4 mb-3">
-                    <button class="btn btn-success" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
-                    <button class="btn btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                    <button class="btn rounded-pill  btn-success" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
+                    <button class="btn rounded-pill  btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                   </div>
                 </form>
               </div>

@@ -57,7 +57,7 @@ if (!isset($_SESSION["ap"])) {
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <label style="display:block; visibility:hidden">Mostrar</label>
-                    <button onclick="listar()" class="btn btn-success" type="button"><i class="fa fa-search"></i> Mostrar</button>
+                    <button onclick="listar()" class="btn rounded-pill  btn-success" type="button"><i class="fa fa-search"></i> Mostrar</button>
                   </div>
                 </div>
 

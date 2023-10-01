@@ -14,7 +14,7 @@ if (!isset($_SESSION["ap"])) {
       <div class="sticky-element d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
         <h4 class="mb-sm-0 me-2">Permiso</h4>
         <div class="action-btns">
-          <small><button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></small>
+          <small><button class="btn rounded-pill  btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></small>
         </div>
       </div>
 

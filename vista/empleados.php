@@ -14,7 +14,7 @@ if (!isset($_SESSION["ap"])) {
       <div class="sticky-element d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
         <h4 class="mb-sm-0 me-2">Registro empleados</h4>
         <div class="action-btns">
-          <button class="btn btn-success me-3" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button>
+          <button class="btn rounded-pill  btn-success me-3" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button>
         </div>
       </div>
       <div class="row">
@@ -90,7 +90,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Rol (Tipo usuario):</label>
-                      <select class="js-example-basic-single" name="rol" id="rol">
+                      <select class="select2 form-select rounded-pill" name="rol" id="rol">
                         <option value="Supervisor">Supervisor</option>
                         <option value="Administrador">Administrador</option>
                         <option value="CajeroUV">Cajero UV</option>
@@ -105,7 +105,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Pais de trabajo:</label>
-                      <select class="js-example-basic-single" name="pais" id="pais" required>
+                      <select class="select2 form-select rounded-pill" name="pais" id="pais" required>
                       </select>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -118,7 +118,7 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Trabaja Interno?:</label>
-                      <select class="js-example-basic-single" name="interno" id="interno">
+                      <select class="select2 form-select rounded-pill" name="interno" id="interno">
                         <option value="SI">Interno</option>
                         <option value="NO">Externo</option>
                       </select>
@@ -129,14 +129,14 @@ if (!isset($_SESSION["ap"])) {
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <label>Agencia de trabajo:</label>
-                      <select class="js-example-basic-single" name="agenciaA" id="agenciaA" required>
+                      <select class="select2 form-select rounded-pill" name="agenciaA" id="agenciaA" required>
                       </select>
                     </div>
                   </div>
 
                   <div class="pt-4">
-                    <button class="btn btn-success me-sm-3 me-1" onmouseenter="validarAP()" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
-                    <button class="btn btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                    <button class="btn rounded-pill  btn-success me-sm-3 me-1" onmouseenter="validarAP()" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
+                    <button class="btn rounded-pill  btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                   </div>
                 </form>
               </div>
