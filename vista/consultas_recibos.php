@@ -9,9 +9,11 @@ if (!isset($_SESSION["ap"])) {
   require 'header.php';
   if ($_SESSION['consultas'] == 1) {
 ?>
+<!-- Content wrapper -->
+<div class="content-wrapper">
     <div class="container-xxl flex-grow-1 container-p-y">
 
-      <div class="sticky-element d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
+      <div class="d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
         <h4 class="mb-sm-0 me-2">Consultas recibos por fechas y cliente</h4>
       </div>
 
@@ -33,7 +35,7 @@ if (!isset($_SESSION["ap"])) {
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <label>Receptor</label>
-                    <select class="form-control rounded-pill js-example-basic-single" name="DNIremitente" id="DNIremitente" required>
+                    <select class="select2 form-select rounded-pill" name="DNIremitente" id="DNIremitente" required>
                     </select>
                   </div>
 

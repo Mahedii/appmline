@@ -125,8 +125,9 @@ if (!isset($_SESSION["ap"])) {
       ?>
 
 
-      <div class="content-wrapper">
-
+      
+<!-- Content wrapper -->
+<div class="content-wrapper">
         <div class="container-xxl flex-grow-1 container-p-y">
 
         <h4 class="py-3 mb-4"><span>Escritorio <small class="text-muted fw-light">Estadisticas</small></h4>

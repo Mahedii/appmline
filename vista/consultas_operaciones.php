@@ -9,9 +9,11 @@ if (!isset($_SESSION["ap"])) {
   require 'header.php';
   if ($_SESSION['operaciones'] == 1) {
 ?>
+<!-- Content wrapper -->
+<div class="content-wrapper">
     <div class="container-xxl flex-grow-1 container-p-y">
 
-      <div class="sticky-element d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
+      <div class="d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
         <h4 class="mb-sm-0 me-2">Consultas de operaciones generales</h4>
       </div>
 
@@ -33,7 +35,7 @@ if (!isset($_SESSION["ap"])) {
                   </div>
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <label>Tipo de operacion (*):</label>
-                    <select class="form-control rounded-pill js-example-basic-single" name="codigo_ope" id="codigo_ope">
+                    <select class="select2 form-select rounded-pill" name="codigo_ope" id="codigo_ope">
                       <option value="">TODOS</option>
                       <option value="002">RECARGA UV AGENCIA</option>
                       <option value="003">RESTITUIR UV AGENCIA</option>
@@ -46,12 +48,12 @@ if (!isset($_SESSION["ap"])) {
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <label>Agencia</label>
-                    <select class="form-control rounded-pill js-example-basic-single" name="agencia" id="agencia" required>
+                    <select class="select2 form-select rounded-pill" name="agencia" id="agencia" required>
                     </select>
                   </div>
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <label>Empleado</label>
-                    <select class="form-control rounded-pill js-example-basic-single" name="ap" id="ap" required>
+                    <select class="select2 form-select rounded-pill" name="ap" id="ap" required>
                     </select>
                   </div>
 

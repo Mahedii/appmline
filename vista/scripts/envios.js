@@ -51,7 +51,7 @@ function mostrarform(flag) {
     limpiar();
     if (flag) {
         // $("#listadoregistros").hide();
-        $("#formularioregistros").show();
+        // $("#formularioregistros").show();
         var t = document.querySelector("#add-new-record");
         (offCanvasEl = new bootstrap.Offcanvas(t)),
         offCanvasEl.show();
