@@ -19,7 +19,6 @@ if (!isset($_SESSION["ap"])) {
             <?php if ($_SESSION['rol'] != 'Agencia' || $_SESSION['rol'] != 'CajeroUV') { ?>
               <small>
                 <button class="create-new btn btn-primary waves-effect waves-light" tabindex="0" type="button"><span><i class="ti ti-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Agregar</span></span></button>
-                <button class="btn rounded-pill  btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button>
               </small>
             <?php } ?>
           </div>
@@ -59,53 +58,6 @@ if (!isset($_SESSION["ap"])) {
                     </tfoot>
                   </table>
                 </div>
-
-                <div id="formularioregistros">
-                  <form name="formulario" id="formulario" method="POST">
-
-                    <div class="pt-4 mb-3">
-                      <?php if ($_SESSION['rol'] != 'Administrador') { // VALIDACION DE ROLES 
-                      ?>
-                        <button onmouseout="generarCuentaBancoComercial()" class="btn rounded-pill  btn-success" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
-                        <button class="btn rounded-pill  btn-dark" type="button" id="btnDebitar" onclick="MODALOperarBancoComercial()"> <i class="fa fa-minus-square"></i> <i class="fa fa-reply-all"> </i> C-D UV Comercial <i class="fa fa-plus-square"> </i></button>
-                      <?php  } ?>
-                      <button class="btn rounded-pill  btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
-                    </div>
-
-                    <div class="row g-3">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <label>Nombre (*):</label>
-                        <input type="hidden" name="idbancoc" id="idbancoc">
-                        <input type="text" class="form-control rounded-pill" name="nombre" id="nombre" maxlength="55" placeholder="Nombre banco comercial" required>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <label>Pais (*):</label>
-                        <select class="select2 form-select rounded-pill" name="pais" id="pais" required>
-                        </select>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <label>Ciudad:</label>
-                        <input type="text" class="form-control rounded-pill" name="ciudad" id="ciudad" maxlength="45" placeholder="Ciudad de la agencia">
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <label>Responsable comercial (*):</label>
-                        <select class="select2 form-select rounded-pill" name="responsable" id="responsable" onchange="generarCuentaBancoComercial()" required>
-                        </select>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <label>Gerente supervisor:</label>
-                        <select class="select2 form-select rounded-pill" name="supervisor" id="supervisor">
-                        </select>
-                      </div>
-
-                      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                        <label>Numero de cuenta CORRIENTE(*):</label>
-                        <input type="text" class="form-control rounded-pill" name="ncp" id="ncp" maxlength="45" placeholder="Numero de cuenta corriente" required readonly>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <!--Fin centro -->
 
                 <!--Modal centro -->
                 <div class="modal fade" id="MODALOperarBancoComercial" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -192,17 +144,50 @@ if (!isset($_SESSION["ap"])) {
           <div class="offcanvas-body flex-grow-1">
             <form class="add-new-record pt-0 row g-2" name="formulario form-add-new-record" id="formulario" method="POST">
               <div class="row g-3">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Nombre (*):</label>
+                  <input type="hidden" name="idbancoc" id="idbancoc">
+                  <input type="text" class="form-control rounded-pill" name="nombre" id="nombre" maxlength="55" placeholder="Nombre banco comercial" required>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Pais (*):</label>
+                  <select class="select2 form-select rounded-pill" name="pais" id="pais" required>
+                  </select>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Ciudad:</label>
+                  <input type="text" class="form-control rounded-pill" name="ciudad" id="ciudad" maxlength="45" placeholder="Ciudad de la agencia">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Responsable comercial (*):</label>
+                  <select class="select2 form-select rounded-pill" name="responsable" id="responsable" onchange="generarCuentaBancoComercial()" required>
+                  </select>
+                </div>
+                <div class="col-sm-12 col-xs-12">
+                  <label>Gerente supervisor:</label>
+                  <select class="select2 form-select rounded-pill" name="supervisor" id="supervisor">
+                  </select>
+                </div>
 
+                <div class="col-sm-12 col-xs-12">
+                  <label>Numero de cuenta CORRIENTE(*):</label>
+                  <input type="text" class="form-control rounded-pill" name="ncp" id="ncp" maxlength="45" placeholder="Numero de cuenta corriente" required readonly>
+                </div>
 
                 <div class="col-sm-12">
-                  <button class="btn rounded-pill  btn-success me-sm-3 me-1 waves-effect waves-light" onmouseenter="verificarMontoCOBRAR()" type="submit" id="btnGuardar"><i class="fa fa-envelope"></i> Retirar ahora</button>
-                  <button class="btn rounded-pill  btn-danger btn-outline-secondary waves-effect" onclick="cancelarform()" type="reset" data-bs-dismiss="offcanvas"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                  <?php if ($_SESSION['rol'] != 'Administrador') { // VALIDACION DE ROLES 
+                  ?>
+                    <button onmouseout="generarCuentaBancoComercial()" class="btn rounded-pill btn-success me-sm-3 me-1 mt-2 waves-effect waves-light" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
+                    <button class="btn rounded-pill btn-dark me-sm-3 me-1 mt-2 waves-effect waves-light" type="button" id="btnDebitar" onclick="MODALOperarBancoComercial()"> <i class="fa fa-minus-square"></i> <i class="fa fa-reply-all"> </i> C-D UV Comercial <i class="fa fa-plus-square"> </i></button>
+                  <?php  } ?>
+
+                  <button class="btn rounded-pill btn-danger btn-outline-secondary me-sm-3 me-1 mt-2 waves-effect waves-light" onclick="cancelarform()" type="reset" data-bs-dismiss="offcanvas"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                 </div>
             </form>
 
           </div>
         </div>
-        
+
       </div>
 
     <?php

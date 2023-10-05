@@ -19,7 +19,6 @@ if (!isset($_SESSION["ap"])) {
             <?php if ($_SESSION['rol'] != 'Agencia' || $_SESSION['rol'] != 'CajeroUV') { ?>
               <small>
                 <button class="create-new btn btn-primary waves-effect waves-light" tabindex="0" type="button"><span><i class="ti ti-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Agregar</span></span></button>
-                <button class="btn rounded-pill  btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button>
               </small>
             <?php } ?>
           </div>
@@ -66,119 +65,6 @@ if (!isset($_SESSION["ap"])) {
                       <th>Fecha creación</th>
                     </tfoot>
                   </table>
-                </div>
-
-                <div id="formularioregistros">
-                  <form name="formulario" id="formulario" method="POST">
-                    <div class="pt-4 mb-3">
-                      <?php if ($_SESSION['rol'] != 'Agencia') { // VALIDACION DE ROLES 
-                      ?>
-                        <button class="btn rounded-pill  btn-success" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
-                        <button class="btn rounded-pill  btn-dark" type="button" id="btnDebitar" onclick="MODALOperarCaja()"> <i class="fa fa-minus-square"></i> <i class="fa fa-reply-all"> </i> C-D Comisiones Caja <i class="fa fa-plus-square"> </i></button>
-                      <?php  } ?>
-                      <button class="btn rounded-pill  btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
-                    </div>
-
-                    <div class="row g-3">
-
-                      <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Nombre del GERENTE (*) :</label>
-                        <select onchange="ponerAgenciaCliente()" class="select2 form-select rounded-pill" name="cliente" id="cliente" required>
-                        </select>
-                        <input type="hidden" name="idCaja" id="idCaja">
-                      </div>
-                      <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Agencia Master Ligada :</label>
-                        <select class="select2 form-select rounded-pill" name="agencia" id="agencia">
-                        </select>
-                      </div>
-                      <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Nombre caja (*):</label>
-                        <input type="text" class="form-control rounded-pill" name="nombre" id="nombre" maxlength="30" placeholder="Nombre de la caja" required>
-                      </div>
-                      <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Cajero (*):</label>
-                        <select onchange="ponerNCPCajero()" class="select2 form-select rounded-pill" name="cajero" id="cajero" required>
-                        </select>
-                      </div>
-                      <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Numero cuenta CORRIENTE :</label>
-                        <input type="number" class="form-control rounded-pill" name="ncpCorriente" id="ncpCorriente" maxlength="45" placeholder="Numero cuenta corriente">
-                      </div>
-                      <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Numero cuenta COMISIONES:</label>
-                        <input type="number" class="form-control rounded-pill" name="ncpComisiones" id="ncpComisiones" maxlength="45" placeholder="Numero de cuenta de comisiones">
-                      </div>
-                      <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Monto maximo envio:</label>
-                        <input type="text" class="form-control rounded-pill" name="montoMaxEnvio" id="montoMaxEnvio" maxlength="45" placeholder="Monto maximo envio">
-                      </div>
-                      <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Caja cerrada :</label>
-                        <select class="select2 form-select rounded-pill" name="cajacerrada" id="cajacerrada">
-                          <option value="NO">NO</option>
-                          <option value="SI">SI</option>
-                        </select>
-                      </div>
-                    </div>
-
-
-                    <!-- <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                    <div class="box box-warning">
-                      <div class="box-header with-border">
-                        <h3 class="box-title">Historial movimientos</h3>
-                      </div>
-
-                      <div class="box-body">
-                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <label>OPERACION :</label>
-                            <select  class="select2 form-select rounded-pill"  name="filtro" id="filtro" >
-                                <option value="NO">ENVIOS</option>
-                                <option value="SI">RECIBOS</option>
-                                <option value="SIS">CREDITAR CAJA</option>
-                                <option value="SIW">DEBITAR CAJA</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <label>Rango fechas:</label>
-                            <div class="input-group">
-                            <div class="input-group-addon">
-                            <i class="fa fa-calendar"></i>
-                            </div>
-                            <input type="text" class="form-control rounded-pill pull-right" name="rangofechas" id="rangofechas" >
-                            </div>
-                        </div> 
-                        <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                        <label>Accion</label>
-                        <button class="btn rounded-pill  btn-info form-control rounded-pill" type="button" id="btnFiltrar"><i class="fa fa-filter"></i> Buscar</button>
-                      </div>
-                      <form role="form">
-                        <table id="detalles" class="table table-striped table-bordered table-condensed table-hover">
-                          <thead style="background-color:#A9D0F5">
-                                <th>Opciones</th>
-                                <th>Artículo</th>
-                                <th>Cantidad</th>
-                                <th>Precio Compra</th>
-                                <th>Precio Venta</th>
-                                <th>Subtotal</th>
-                            </thead>
-                            <tfoot>
-                                <th>TOTAL</th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th><h4 id="total"> 0.00 XAF</h4><input type="hidden" name="total_compra" id="total_compra"></th> 
-                            </tfoot>
-                            <tbody>
-                              
-                            </tbody>
-                        </table>          
-                      </form> 
-                    </div>
-                  </div> -->
-
-                  </form>
                 </div>
 
                 <!--Modal centro -->
@@ -265,11 +151,53 @@ if (!isset($_SESSION["ap"])) {
           <div class="offcanvas-body flex-grow-1">
             <form class="add-new-record pt-0 row g-2" name="formulario form-add-new-record" id="formulario" method="POST">
               <div class="row g-3">
-
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Nombre del GERENTE (*) :</label>
+                  <select onchange="ponerAgenciaCliente()" class="select2 form-select rounded-pill" name="cliente" id="cliente" required>
+                  </select>
+                  <input type="hidden" name="idCaja" id="idCaja">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Agencia Master Ligada :</label>
+                  <select class="select2 form-select rounded-pill" name="agencia" id="agencia">
+                  </select>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Nombre caja (*):</label>
+                  <input type="text" class="form-control rounded-pill" name="nombre" id="nombre" maxlength="30" placeholder="Nombre de la caja" required>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Cajero (*):</label>
+                  <select onchange="ponerNCPCajero()" class="select2 form-select rounded-pill" name="cajero" id="cajero" required>
+                  </select>
+                </div>
+                <div class="col-sm-12 col-xs-12">
+                  <label>Numero cuenta CORRIENTE :</label>
+                  <input type="number" class="form-control rounded-pill" name="ncpCorriente" id="ncpCorriente" maxlength="45" placeholder="Numero cuenta corriente">
+                </div>
+                <div class="col-sm-12 col-xs-12">
+                  <label>Numero cuenta COMISIONES:</label>
+                  <input type="number" class="form-control rounded-pill" name="ncpComisiones" id="ncpComisiones" maxlength="45" placeholder="Numero de cuenta de comisiones">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Monto maximo envio:</label>
+                  <input type="text" class="form-control rounded-pill" name="montoMaxEnvio" id="montoMaxEnvio" maxlength="45" placeholder="Monto maximo envio">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Caja cerrada :</label>
+                  <select class="select2 form-select rounded-pill" name="cajacerrada" id="cajacerrada">
+                    <option value="NO">NO</option>
+                    <option value="SI">SI</option>
+                  </select>
+                </div>
 
                 <div class="col-sm-12">
-                  <button class="btn rounded-pill  btn-success me-sm-3 me-1 waves-effect waves-light" onmouseenter="verificarMontoCOBRAR()" type="submit" id="btnGuardar"><i class="fa fa-envelope"></i> Retirar ahora</button>
-                  <button class="btn rounded-pill  btn-danger btn-outline-secondary waves-effect" onclick="cancelarform()" type="reset" data-bs-dismiss="offcanvas"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                  <?php if ($_SESSION['rol'] != 'Agencia') { // VALIDACION DE ROLES 
+                  ?>
+                    <button class="btn rounded-pill btn-success me-sm-3 me-1 mt-2 waves-effect waves-light" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
+                    <button class="btn rounded-pill btn-dark me-sm-3 me-1 mt-2 waves-effect waves-light" type="button" id="btnDebitar" onclick="MODALOperarCaja()"> <i class="fa fa-minus-square"></i> <i class="fa fa-reply-all"> </i> C-D Comisiones Caja <i class="fa fa-plus-square"> </i></button>
+                  <?php  } ?>
+                  <button class="btn rounded-pill btn-danger btn-outline-secondary me-sm-3 me-1 mt-2 waves-effect waves-light" onclick="cancelarform()" type="reset" data-bs-dismiss="offcanvas"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                 </div>
             </form>
 

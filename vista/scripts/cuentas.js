@@ -94,6 +94,9 @@ function mostrarform(flag) {
     if (flag) {
         // $("#listadoregistros").hide();
         // $("#formularioregistros").show();
+        var t = document.querySelector("#add-new-record");
+        (offCanvasEl = new bootstrap.Offcanvas(t)),
+        offCanvasEl.show();
         $("#btnGuardar").prop("disabled", false);
         $("#btnagregar").hide();
     } else {

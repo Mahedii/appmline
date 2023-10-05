@@ -17,8 +17,6 @@ if (!isset($_SESSION["ap"])) {
           <h4 class="mb-sm-0 me-2">Clientes</h4>
           <div class="action-btns">
             <button class="create-new btn btn-primary waves-effect waves-light" tabindex="0" type="button"><span><i class="ti ti-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Agregar</span></span></button>
-
-            <button class="btn rounded-pill  btn-success me-3" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button>
           </div>
         </div>
 
@@ -63,55 +61,6 @@ if (!isset($_SESSION["ap"])) {
                   </table>
                 </div>
 
-                <div id="formularioregistros">
-                  <form name="formulario" id="formulario" method="POST">
-                    <div class="row g-3">
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Nombre completo(*):</label>
-                        <input type="hidden" name="modif" id="modif">
-                        <input type="text" class="form-control rounded-pill" name="nomcompleto" id="nomcompleto" maxlength="50" placeholder="Nombre completpo" required>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>DNI (*):</label>
-                        <input type="text" class="form-control rounded-pill" onmousemove="generarCuentaCliente(value)" onkeypress="generarCuentaCliente(value)" onmouseleave="generarCuentaCliente(value)" name="DNIremitente" id="DNIremitente" maxlength="10" placeholder="DNI del cliente" required>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Telefono (*):</label>
-                        <input type="text" class="form-control rounded-pill" name="tel" id="tel" maxlength="22" placeholder="Telefono del cliente">
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Pais (*):</label>
-                        <select class="select2 form-select rounded-pill" name="pais" id="pais" required>
-                        </select>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Direccion:</label>
-                        <input type="text" class="form-control rounded-pill" name="direccion" id="direccion" maxlength="80" placeholder="Direccion del cliente">
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Agencia :</label>
-                        <select class="select2 form-select rounded-pill" name="agencia_cli" id="agencia_cli" required>
-                        </select>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Numero cuenta CORRIENTE:</label>
-                        <input type="text" class="form-control rounded-pill" name="ncp" id="ncp" maxlength="40" placeholder="Numero de cuenta">
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label>Estado:</label>
-                        <select class="select2 form-select rounded-pill" name="estado" id="estado">
-                          <option value="1">Activo</option>
-                          <option value="2">Suspendido</option>
-                        </select>
-                      </div>
-
-                    </div>
-                    <div class="pt-4 mb-3">
-                      <button class="btn rounded-pill  btn-success" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
-                      <button class="btn rounded-pill  btn-danger btn-label-secondary" onclick="cancelarform()" type="reset"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
-                    </div>
-                  </form>
-                </div>
               </div>
             </div>
           </div>
@@ -125,11 +74,48 @@ if (!isset($_SESSION["ap"])) {
           <div class="offcanvas-body flex-grow-1">
             <form class="add-new-record pt-0 row g-2" name="formulario form-add-new-record" id="formulario" method="POST">
               <div class="row g-3">
-
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Nombre completo(*):</label>
+                  <input type="hidden" name="modif" id="modif">
+                  <input type="text" class="form-control rounded-pill" name="nomcompleto" id="nomcompleto" maxlength="50" placeholder="Nombre completpo" required>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>DNI (*):</label>
+                  <input type="text" class="form-control rounded-pill" onmousemove="generarCuentaCliente(value)" onkeypress="generarCuentaCliente(value)" onmouseleave="generarCuentaCliente(value)" name="DNIremitente" id="DNIremitente" maxlength="10" placeholder="DNI del cliente" required>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Telefono (*):</label>
+                  <input type="text" class="form-control rounded-pill" name="tel" id="tel" maxlength="22" placeholder="Telefono del cliente">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Pais (*):</label>
+                  <select class="select2 form-select rounded-pill" name="pais" id="pais" required>
+                  </select>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Direccion:</label>
+                  <input type="text" class="form-control rounded-pill" name="direccion" id="direccion" maxlength="80" placeholder="Direccion del cliente">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Agencia :</label>
+                  <select class="select2 form-select rounded-pill" name="agencia_cli" id="agencia_cli" required>
+                  </select>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Numero cuenta CORRIENTE:</label>
+                  <input type="text" class="form-control rounded-pill" name="ncp" id="ncp" maxlength="40" placeholder="Numero de cuenta">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Estado:</label>
+                  <select class="select2 form-select rounded-pill" name="estado" id="estado">
+                    <option value="1">Activo</option>
+                    <option value="2">Suspendido</option>
+                  </select>
+                </div>
 
                 <div class="col-sm-12">
-                  <button class="btn rounded-pill  btn-success me-sm-3 me-1 waves-effect waves-light" onmouseenter="verificarMontoCOBRAR()" type="submit" id="btnGuardar"><i class="fa fa-envelope"></i> Retirar ahora</button>
-                  <button class="btn rounded-pill  btn-danger btn-outline-secondary waves-effect" onclick="cancelarform()" type="reset" data-bs-dismiss="offcanvas"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                  <button class="btn rounded-pill  btn-success me-sm-3 me-1 waves-effect waves-light" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
+                  <button class="btn rounded-pill  btn-danger btn-outline-secondary me-sm-3 me-1 waves-effect waves-light" onclick="cancelarform()" type="reset" data-bs-dismiss="offcanvas"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                 </div>
             </form>
 
