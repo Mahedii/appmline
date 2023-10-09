@@ -19,7 +19,6 @@
 
     
     <!-- <link rel="stylesheet" href="../public/dist/css/bootstrap.min.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="../public/dist/css/bootstrap-select.min.css"> -->
     <!-- <link rel="stylesheet" href="../public/dist/assets/vendor/libs/select2/select2.css" /> -->
 
@@ -42,17 +41,18 @@
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/swiper/swiper.css" />
 
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="../public/dist/assets/vendor/libs/bootstrap-select/bootstrap-select.css">
 
-    <!-- <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
+    <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css">
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
-    <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.css"> -->
+    <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.css">
 
     <!--datatable css-->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css"> -->
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="../public/dist/assets/vendor/css/pages/cards-advance.css" />
@@ -75,7 +75,7 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../public/dist/assets/js/config.js"></script>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
 </head>
 

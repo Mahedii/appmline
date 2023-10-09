@@ -76,7 +76,7 @@ if (!isset($_SESSION["ap"])) {
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <label>Movimiento:</label>
-                  <select class="select2 form-select rounded-pill" name="sentido" id="sentido" required>
+                  <select class="selectpicker w-100 rounded-pill" data-style="btn-default" name="sentido" id="sentido" required>
                     <option value="C">Ingreso</option>
                     <option value="D">Gasto</option>
                   </select>

@@ -18,7 +18,6 @@ if (!isset($_SESSION["ap"])) {
           <div class="action-btns">
             <small>
               <button class="create-new btn btn-primary waves-effect waves-light" tabindex="0" type="button"><span><i class="ti ti-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Agregar</span></span></button>
-              <button class="btn rounded-pill  btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button>
             </small>
           </div>
         </div>
@@ -53,45 +52,6 @@ if (!isset($_SESSION["ap"])) {
                     </tfoot>
                   </table>
                 </div>
-
-                <div id="formularioregistros">
-                  <form name="formulario" id="formulario" method="POST">
-                    <div class="row g-3">
-                      <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <input type="hidden" name="idempleado" id="idempleado">
-                        <label>Empleado:</label>
-                        <select class="select2 form-select rounded-pill" name="ap" id="ap" required>
-                        </select>
-                      </div>
-                      <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                        <label>AP o Login *:</label>
-                        <input type="text" readonly="" class="form-control rounded-pill" name="apU" id="apU" maxlength="20" placeholder="Logion o AP" required>
-                      </div>
-                      <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                        <label>Clave temporal *:</label>
-                        <input type="password" class="form-control rounded-pill" name="password" id="password" maxlength="20" placeholder="Contraseña" required>
-                      </div>
-                      <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                        <label>Estado:</label>
-                        <select class="form control js-example-basic-single" name="condicion" id="condicion" required>
-                          <option value="1">Activado</option>
-                          <option value="2">Desactivado</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <label>Permisos:</label>
-                        <ul style="list-style: none;" id="permisos">
-
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="pt-4 mb-3">
-                      <button class="btn rounded-pill  btn-success" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
-                      <button class="btn rounded-pill  btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
-                    </div>
-                  </form>
-                </div>
               </div>
             </div>
           </div>
@@ -105,11 +65,37 @@ if (!isset($_SESSION["ap"])) {
           <div class="offcanvas-body flex-grow-1">
             <form class="add-new-record pt-0 row g-2" name="formulario form-add-new-record" id="formulario" method="POST">
               <div class="row g-3">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <input type="hidden" name="idempleado" id="idempleado">
+                  <label>Empleado:</label>
+                  <select class="select2 form-select rounded-pill" name="ap" id="ap" required>
+                  </select>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>AP o Login *:</label>
+                  <input type="text" readonly="" class="form-control rounded-pill" name="apU" id="apU" maxlength="20" placeholder="Logion o AP" required>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Clave temporal *:</label>
+                  <input type="password" class="form-control rounded-pill" name="password" id="password" maxlength="20" placeholder="Contraseña" required>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Estado:</label>
+                  <select class="selectpicker w-100 rounded-pill" data-style="btn-default" name="condicion" id="condicion" required>
+                    <option value="1">Activado</option>
+                    <option value="2">Desactivado</option>
+                  </select>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Permisos:</label>
+                  <ul style="list-style: none;" id="permisos">
 
+                  </ul>
+                </div>
 
                 <div class="col-sm-12">
-                  <button class="btn rounded-pill  btn-success me-sm-3 me-1 waves-effect waves-light" onmouseenter="verificarMontoCOBRAR()" type="submit" id="btnGuardar"><i class="fa fa-envelope"></i> Retirar ahora</button>
-                  <button class="btn rounded-pill  btn-danger btn-outline-secondary waves-effect" onclick="cancelarform()" type="reset" data-bs-dismiss="offcanvas"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                  <button class="btn rounded-pill  btn-success me-sm-3 me-1 waves-effect waves-light" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
+                  <button class="btn rounded-pill  btn-danger btn-outline-secondary me-sm-3 me-1 waves-effect waves-light" onclick="cancelarform()" type="reset" data-bs-dismiss="offcanvas"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
                 </div>
             </form>
 

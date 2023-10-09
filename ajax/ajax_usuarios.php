@@ -51,8 +51,8 @@ switch ($_GET["op"]){
  				"1"=>$reg->nomcompleto,
  				"2"=>$reg->ap,
 				"3"=>$reg->rol,
- 				"4"=>($reg->permisos==0)?'<span class="label bg-red">Vea permisos</span>':'<span class="label bg-green">'.$reg->permisos.'</span>',
- 				"5"=>($reg->condicion==1)?'<span class="label bg-green">Activado</span>':'<span class="label bg-red">Desactivado</span>',
+ 				"4"=>($reg->permisos==0)?'<span class="badge bg-danger rounded-pill ms-auto">Vea permisos</span>':'<span class="badge bg-success rounded-pill ms-auto">'.$reg->permisos.'</span>',
+ 				"5"=>($reg->condicion==1)?'<span class="badge bg-success rounded-pill ms-auto">Activado</span>':'<span class="badge bg-danger rounded-pill ms-auto">Desactivado</span>',
  				"6"=>$reg->fecrea,
  				"7"=>$reg->agecrea
  				);
