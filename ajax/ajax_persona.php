@@ -221,12 +221,7 @@ if($monto > $saldoNCPcorriente){ // INCIO SI HAY SALDO
 
  		while ($reg=$rspta->fetch_object()){
  			$data[]=array(
- 				"0"=>($reg->estadot=='Pendiente')?
- 					' <a title="Editar enviando solicitud" href="#" onclick="mostrar('.$reg->idtransaccion.')"><i class="fa fa-edit"></i></a>'.
- 					' <a title="Imprimir ticket" target="_blank" href="../reportes/exTicket.php?id='.$reg->idtransaccion.'" onclick="verTiket('.$reg->idtransaccion.')"><i class="fa fa-ticket"></i></a>'
-					:
- 					' <a title="Recibido o revalidar" href="#" onclick="mostrar('.$reg->idtransaccion.')"><i class="fa fa-edit"></i></a>'.
- 					' <a title="Imprimir ticket" target="_blank" href="../reportes/exTicket2.php?id='.$reg->codigo.'" ><i class="fa fa-ticket"></i></a>',
+ 				"0"=>'',
  				"1"=>$reg->nomcompleto,
  				"2"=>$reg->tel,
  				"3"=>number_format($reg->monto, 0, '', ','),
@@ -239,7 +234,13 @@ if($monto > $saldoNCPcorriente){ // INCIO SI HAY SALDO
 				"10"=>$reg->agentcreat,
  				"11"=>$reg->fecrea,
  				"12"=>($reg->estadot=='Pendiente')?'<span class="label bg-orange">'.$reg->estadot.'</span>':
- 				'<span class="label bg-red">'.$reg->estadot.'</span>'
+ 				'<span class="label bg-red">'.$reg->estadot.'</span>',
+				"13"=>($reg->estadot=='Pendiente')?
+				 ' <a title="Editar enviando solicitud" href="#" onclick="mostrar('.$reg->idtransaccion.')"><i class="text-primary ti ti-pencil"></i></a>'.
+				 ' <a title="Imprimir ticket" target="_blank" href="../reportes/exTicket.php?id='.$reg->idtransaccion.'" onclick="verTiket('.$reg->idtransaccion.')"><i class="fa fa-ticket"></i></a>'
+				:
+				 ' <a title="Recibido o revalidar" href="#" onclick="mostrar('.$reg->idtransaccion.')"><i class="text-primary ti ti-pencil"></i></a>'.
+				 ' <a title="Imprimir ticket" target="_blank" href="../reportes/exTicket2.php?id='.$reg->codigo.'" ><i class="fa fa-ticket"></i></a>',
  				);
  		}
  		$results = array(

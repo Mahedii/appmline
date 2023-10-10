@@ -79,14 +79,14 @@ function listar() {
         "aServerSide": true, //Paginación y filtrado realizados por el servidor 
         columnDefs: [
             {
-            className: "control",
-            orderable: !1,
-            searchable: !1,
-            responsivePriority: 2,
-            targets: 0,
-            render: function (e, t, a, s) {
-                return "";
-            },
+                className: "control",
+                orderable: !1,
+                searchable: !1,
+                responsivePriority: 2,
+                targets: 0,
+                render: function (e, t, a, s) {
+                    return "";
+                },
             },
         ],
         dom: '<"card-header flex-column flex-md-row"<"head-label text-center"><"dt-action-buttons text-end pt-3 pt-md-0"B>><"row"<"col-sm-12 col-md-6"l><"col-sm-12 col-md-6 d-flex justify-content-center justify-content-md-end"f>>t<"row"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>',
@@ -103,7 +103,7 @@ function listar() {
                     text: '<i class="ti ti-printer me-1" ></i>Print',
                     className: "dropdown-item",
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5, 6, 7],
+                        columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
                         format: {
                         body: function (e, t, a) {
                             var s;
@@ -141,7 +141,7 @@ function listar() {
                     text: '<i class="ti ti-file-text me-1" ></i>Csv',
                     className: "dropdown-item",
                     exportOptions: {
-                        columns: [3, 4, 5, 6, 7],
+                        columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
                         format: {
                         body: function (e, t, a) {
                             var s;
@@ -167,7 +167,7 @@ function listar() {
                     text: '<i class="ti ti-file-spreadsheet me-1"></i>Excel',
                     className: "dropdown-item",
                     exportOptions: {
-                        columns: [3, 4, 5, 6, 7],
+                        columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
                         format: {
                         body: function (e, t, a) {
                             var s;
@@ -193,7 +193,7 @@ function listar() {
                     text: '<i class="ti ti-file-description me-1"></i>Pdf',
                     className: "dropdown-item",
                     exportOptions: {
-                        columns: [3, 4, 5, 6, 7],
+                        columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
                         format: {
                         body: function (e, t, a) {
                             var s;
@@ -219,7 +219,7 @@ function listar() {
                     text: '<i class="ti ti-copy me-1" ></i>Copy',
                     className: "dropdown-item",
                     exportOptions: {
-                        columns: [3, 4, 5, 6, 7],
+                        columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
                         format: {
                         body: function (e, t, a) {
                             var s;
@@ -243,7 +243,7 @@ function listar() {
                 ],
             },
             {
-                text: '<i class="ti ti-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Add New Record</span>',
+                text: '<i class="ti ti-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Agregar</span>',
                 className: "create-new btn btn-primary waves-effect waves-light",
             },
         ],
@@ -259,7 +259,8 @@ function listar() {
             details: {
                 display: $.fn.dataTable.Responsive.display.modal({
                     header: function (e) {
-                    return "Details of " + e.data().full_name;
+                    return "Enviar efectivo";
+                    // return "Details of " + e.data().full_name;
                     },
                 }),
                 type: "column",
@@ -281,14 +282,14 @@ function listar() {
                 },
             },
         },
-        "bDestroy": true,
-        "iDisplayLength": 10, //Paginación
-        "order": [
-                [9, "desc"]
-            ] //Ordenar (columna,orden)
+        // "bDestroy": true,
+        // "iDisplayLength": 10, //Paginación
+        // "order": [
+        //         [9, "desc"]
+        //     ] //Ordenar (columna,orden)
     }).DataTable();
     $("div.head-label").html(
-        '<h5 class="card-title mb-0">DataTable with Buttons</h5>'
+        '<h5 class="card-title mb-0">Enviar efectivo</h5>'
     );
 }
 

@@ -48,7 +48,7 @@ if (!isset($_SESSION["ap"])) {
                   <table id="tbllistado" class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width:100%">
                     <thead>
                       <tr>
-                        <th>Opciones</th>
+                        <th></th>
                         <th>Remitente</th>
                         <th>Telefono</th>
                         <th>Monto</th>
@@ -61,12 +61,13 @@ if (!isset($_SESSION["ap"])) {
                         <th>Agente</th>
                         <th>Fecha</th>
                         <th>Estado</th>
+                        <th>Opciones</th>
                       </tr>
                     </thead>
                     <tbody>
                     </tbody>
                     <tfoot>
-                      <th>Opciones</th>
+                      <th></th>
                       <th>Remitente</th>
                       <th>Telefono</th>
                       <th>Monto</th>
@@ -79,6 +80,7 @@ if (!isset($_SESSION["ap"])) {
                       <th>Agente</th>
                       <th>Fecha</th>
                       <th>Estado</th>
+                      <th>Opciones</th>
                     </tfoot>
                   </table>
                 </div>
