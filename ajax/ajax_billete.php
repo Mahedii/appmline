@@ -48,8 +48,7 @@ switch ($_GET["op"]){
 
  		while ($reg=$rspta->fetch_object()){
  			$data[]=array(
- 				"0"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idbillete.')"><i class="fa fa-remove" ></i></a>'.
- 					' <a title="Editar" href="#" onclick="mostrar('.$reg->idbillete.')"><i class="fa fa-edit"></i></a>',
+ 				"0"=>'',
  				"1"=>$reg->nomcompleto,
  				"2"=>$reg->company,
  				"3"=>$reg->ruta,
@@ -61,7 +60,9 @@ switch ($_GET["op"]){
  				"9"=>$reg->descripcion,
  				"10"=>$reg->agencia,
  				"11"=>$reg->agentcrea,
- 				"12"=>$reg->fechaemision
+ 				"12"=>$reg->fechaemision,
+				"13"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idbillete.')"><i class="fa fa-remove" ></i></a>'.
+				 ' <a title="Editar" href="#" onclick="mostrar('.$reg->idbillete.')"><i class="fa fa-edit"></i></a>'
  				);
  		}
  		$results = array(

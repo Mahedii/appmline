@@ -74,7 +74,7 @@ switch ($_GET["op"]){
 
 			$data[]=array(
 
- 				"0"=>'<a title="Editar" href="#" onclick="mostrar('.$reg->idagencia.')"><i class="fa fa-edit"></i></>',
+ 				"0"=>'',
  				"1"=>$reg->nombre,
  				"2"=>$reg->descripcion,
 				"3"=>$reg->pais_nombre,
@@ -87,15 +87,15 @@ switch ($_GET["op"]){
 				"10"=>$reg->responsable_nombre,
 				"11"=>$reg->responsable_Mline,
  				"12"=>$reg->agentcrea,
- 				"13"=>$reg->fecrea
+ 				"13"=>$reg->fecrea,
+				"14"=>'<a title="Editar" href="#" onclick="mostrar('.$reg->idagencia.')"><i class="fa fa-edit"></i></>'
  				);
 			break;
 			
 			default:
 			$data[]=array(
 
-				"0"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idagencia.')"><i class="fa fa-remove" ></i></a>'.
-					' <a title="Editar" href="#" onclick="mostrar('.$reg->idagencia.')"><i class="fa fa-edit"></i></a>',
+				"0"=>'',
 				"1"=>$reg->nombre,
 				"2"=>$reg->descripcion,
 			   	"3"=>$reg->pais_nombre,
@@ -108,7 +108,9 @@ switch ($_GET["op"]){
 			   	"10"=>$reg->responsable_nombre,
 			   	"11"=>$reg->responsable_Mline,
 				"12"=>$reg->agentcrea,
-				"13"=>$reg->fecrea
+				"13"=>$reg->fecrea,
+				"14"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idagencia.')"><i class="fa fa-remove" ></i></a>'.
+					' <a title="Editar" href="#" onclick="mostrar('.$reg->idagencia.')"><i class="fa fa-edit"></i></a>'
 				);
 
 			} // FIN switch

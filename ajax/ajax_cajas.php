@@ -108,14 +108,8 @@ switch ($_GET["op"]){
 			default:
 		
 			$data[]=array(
-			   "0"=>$enum,
-			   "1" => '<div class="dropdown d-inline-block">'.
-							'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
-							'<ul class="dropdown-menu dropdown-menu-end">'.
-								'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->idCaja.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
-								'<li><a class="dropdown-item remove-item-btn" title="Eliminar" href="#" onclick="eliminar('.$reg->idCaja.')"><i class="text-primary ti ti-trash align-bottom text-muted"></i> Delete</a></li>'.
-							'</ul>'.
-						'</div>',
+			   "0"=>'',
+			   "1"=>$enum,
 			   "2"=>$reg->nombre,
 			   "3"=>$reg->agencia,
 			   "4"=>$reg->cliente,
@@ -126,9 +120,16 @@ switch ($_GET["op"]){
 			   "9"=>$reg->ncpComisiones,
 			   "10"=>number_format($reg->montoMaxEnvio, 0, '', ','),
 			   "11"=>($reg->cajacerrada=='NO')?'<span class="label bg-green">No</span>':
-			   '<span class="label bg-red">Si</span>',
+			   		'<span class="label bg-red">Si</span>',
 			   "12"=>$reg->usCreador,
-			   "13"=>$reg->fecrea
+			   "13"=>$reg->fecrea,
+			   "14" => '<div class="dropdown d-inline-block">'.
+							'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
+							'<ul class="dropdown-menu dropdown-menu-end">'.
+								'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->idCaja.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
+								'<li><a class="dropdown-item remove-item-btn" title="Eliminar" href="#" onclick="eliminar('.$reg->idCaja.')"><i class="text-primary ti ti-trash align-bottom text-muted"></i> Delete</a></li>'.
+							'</ul>'.
+						'</div>'
 				);
 		   $enum++;
 

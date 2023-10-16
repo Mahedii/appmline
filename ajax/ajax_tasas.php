@@ -45,14 +45,8 @@ switch ($_GET["op"]){
 
  		while ($reg=$rspta->fetch_object()){
  			$data[]=array(
-				"0"=>$reg->pais_origenNOM,
-				"1" => '<div class="dropdown d-inline-block">'.
-							'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
-							'<ul class="dropdown-menu dropdown-menu-end">'.
-								'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->idTasas.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
-								'<li><a class="dropdown-item remove-item-btn" title="Eliminar" href="#" onclick="eliminar('.$reg->idTasas.')"><i class="text-primary ti ti-trash align-bottom text-muted"></i> Delete</a></li>'.
-							'</ul>'.
-						'</div>',
+				"0"=>'',
+				"1"=>$reg->pais_origenNOM,
 				"2"=>$reg->pais_destinoNOM,
 				"3"=>$reg->Descripcion,
  				"4"=>number_format($reg->Monto1, 0, '', ','),
@@ -61,7 +55,14 @@ switch ($_GET["op"]){
 				"7"=>number_format($reg->MontoSOBRE, 0, '', ','),
  				"8"=>number_format($reg->comisiont, 0, '', ','),
  				"9"=>$reg->fecreat,
- 				"10"=>$reg->agencrea
+ 				"10"=>$reg->agencrea,
+				"11" => '<div class="dropdown d-inline-block">'.
+						'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
+						'<ul class="dropdown-menu dropdown-menu-end">'.
+							'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->idTasas.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
+							'<li><a class="dropdown-item remove-item-btn" title="Eliminar" href="#" onclick="eliminar('.$reg->idTasas.')"><i class="text-primary ti ti-trash align-bottom text-muted"></i> Delete</a></li>'.
+						'</ul>'.
+					'</div>'
  				);
  		}
  		$results = array(

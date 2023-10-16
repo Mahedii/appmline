@@ -57,13 +57,8 @@ switch ($_GET["op"]){
 			case 'CajeroUV': // SI ES UN USUARIO DE LA CAJA UV venta de unidades
 			
  			$data[]=array(
-				"0"=>$enum,
-				"1" => '<div class="dropdown d-inline-block">'.
-							'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
-							'<ul class="dropdown-menu dropdown-menu-end">'.
-								'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->numerocuenta.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
-							'</ul>'.
-						'</div>',
+				"0"=>'',
+				"1"=>$enum,
 				"2"=>$reg->nomcompleto,
  				"3"=>$reg->numerocuenta,
 				"4"=>$reg->tipo_cuenta,
@@ -73,38 +68,45 @@ switch ($_GET["op"]){
 				"8"=>$reg->nombre_pais,
                 "9"=>$reg->tel,
 				"10"=>($reg->cuenta_cerrada=='NO')?'<span class="label bg-green">No</span>':
-                '<span class="label bg-red">Si</span>',
+                	'<span class="label bg-red">Si</span>',
 				"11"=>$reg->femovimiento,
 				"12"=>$reg->usCreador,
- 				"13"=>$reg->fecreacion
+ 				"13"=>$reg->fecreacion,
+				"14" => '<div class="dropdown d-inline-block">'.
+					'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
+					'<ul class="dropdown-menu dropdown-menu-end">'.
+						'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->numerocuenta.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
+					'</ul>'.
+				'</div>'
  				);
 			$enum++;
 			break;
 
 			default: // Sea Admin, Super Admin, Supervisor
 			$data[]=array(
-			   "0"=>$enum,
-			   "1" => '<div class="dropdown d-inline-block">'.
+				"0"=>'',
+				"1"=>$enum,
+				"2"=>$reg->nomcompleto,
+				"3"=>$reg->numerocuenta,
+				"4"=>$reg->tipo_cuenta,
+				"5"=>number_format($reg->saldo, 0, '', ','),
+				"6"=>$reg->nomagencialigada,
+				"7"=>$reg->nomgestor,
+				"8"=>$reg->nombre_pais,
+				"9"=>$reg->tel,
+				"10"=>($reg->cuenta_cerrada=='NO')?'<span class="label bg-green">No</span>':
+					'<span class="label bg-red">Si</span>',
+				"11"=>$reg->femovimiento,
+				"12"=>$reg->usCreador,
+				"13"=>$reg->fecreacion,
+				"14" => '<div class="dropdown d-inline-block">'.
 							'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
 							'<ul class="dropdown-menu dropdown-menu-end">'.
 								'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->numerocuenta.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
 								'<li><a class="dropdown-item remove-item-btn" title="Eliminar" href="#" onclick="eliminar('.$reg->numerocuenta.')"><i class="text-primary ti ti-trash align-bottom text-muted"></i> Delete</a></li>'.
 							'</ul>'.
-						'</div>',
-			   "2"=>$reg->nomcompleto,
-				"3"=>$reg->numerocuenta,
-			   "4"=>$reg->tipo_cuenta,
-			   "5"=>number_format($reg->saldo, 0, '', ','),
-			   "6"=>$reg->nomagencialigada,
-				"7"=>$reg->nomgestor,
-			   "8"=>$reg->nombre_pais,
-			   "9"=>$reg->tel,
-			   "10"=>($reg->cuenta_cerrada=='NO')?'<span class="label bg-green">No</span>':
-			   '<span class="label bg-red">Si</span>',
-			   "11"=>$reg->femovimiento,
-			   "12"=>$reg->usCreador,
-				"13"=>$reg->fecreacion
-				);
+						'</div>'
+			);
 		   $enum++;
 
 		} // FIN SWITCH

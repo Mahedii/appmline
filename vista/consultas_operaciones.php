@@ -13,9 +13,9 @@ if (!isset($_SESSION["ap"])) {
 <div class="content-wrapper">
     <div class="container-xxl flex-grow-1 container-p-y">
 
-      <div class="d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
+      <!-- <div class="d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
         <h4 class="mb-sm-0 me-2">Consultas de operaciones generales</h4>
-      </div>
+      </div> -->
 
       <div class="row">
 
@@ -65,6 +65,7 @@ if (!isset($_SESSION["ap"])) {
 
                 <table id="tbllistado" class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width:100%">
                   <thead>
+                    <th></th>
                     <th>Remitente</th>
                     <th>Cuenta remite</th>
                     <th>Monto</th>
@@ -84,6 +85,7 @@ if (!isset($_SESSION["ap"])) {
                   <tbody>
                   </tbody>
                   <tfoot>
+                    <th></th>
                     <th>Remitente</th>
                     <th>Cuenta remite</th>
                     <th>Monto</th>

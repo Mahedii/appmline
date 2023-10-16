@@ -71,7 +71,7 @@ switch ($_GET["op"]){
 
 			$data[]=array(
 
- 				"0"=>'<a title="Editar" href="#" onclick="mostrar('.$reg->idbancoc.')"><i class="fa fa-edit"></i></>',
+ 				"0"=>'',
  				"1"=>$reg->nombre,
 			   	"2"=>$reg->pais_nombre,
 				"3"=>$reg->ciudad,
@@ -80,15 +80,15 @@ switch ($_GET["op"]){
 			   	"6"=>$reg->responsable_nombre,
 			   	"7"=>$reg->gerente,
 				"8"=>$reg->agentcrea,
-				"9"=>$reg->fecrea
+				"9"=>$reg->fecrea,
+				"10"=>'<a title="Editar" href="#" onclick="mostrar('.$reg->idbancoc.')"><i class="fa fa-edit"></i></>'
  				);
 			break;
 			
 			default:
 			$data[]=array(
 
-				"0"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idbancoc.')"><i class="fa fa-remove" ></i></a>'.
-					' <a title="Editar" href="#" onclick="mostrar('.$reg->idbancoc.')"><i class="fa fa-edit"></i></a>',
+				"0"=>'',
 				"1"=>$reg->nombre,
 			   	"2"=>$reg->pais_nombre,
 				"3"=>$reg->ciudad,
@@ -97,7 +97,9 @@ switch ($_GET["op"]){
 			   	"6"=>$reg->responsable_nombre,
 			   	"7"=>$reg->gerente,
 				"8"=>$reg->agentcrea,
-				"9"=>$reg->fecrea
+				"9"=>$reg->fecrea,
+				"10"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idbancoc.')"><i class="fa fa-remove" ></i></a>'.
+					' <a title="Editar" href="#" onclick="mostrar('.$reg->idbancoc.')"><i class="fa fa-edit"></i></a>'
 				);
 
 			} // FIN switch

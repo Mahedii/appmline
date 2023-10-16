@@ -14,7 +14,7 @@ if (!isset($_SESSION["ap"])) {
       <div class="container-xxl flex-grow-1 container-p-y">
 
         <div class="d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
-          <h4 class="mb-sm-0 me-2">Agencias</h4>
+          <!-- <h4 class="mb-sm-0 me-2">Agencias</h4> -->
           <div class="action-btns">
             <?php if ($_SESSION['rol'] != 'Agencia' || $_SESSION['rol'] != 'CajeroUV') { ?>
               <small><button class="create-new btn btn-primary waves-effect waves-light" tabindex="0" type="button"><span><i class="ti ti-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Agregar</span></span></button></small>
@@ -30,7 +30,7 @@ if (!isset($_SESSION["ap"])) {
                 <div id="listadoregistros">
                   <table id="tbllistado" class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width:100%">
                     <thead>
-                      <th>Opciones</th>
+                      <th></th>
                       <th>Nombre</th>
                       <th>Descripción</th>
                       <th>Pais</th>
@@ -44,11 +44,12 @@ if (!isset($_SESSION["ap"])) {
                       <th>ResponsableMline</th>
                       <th>Creado por</th>
                       <th>Fecha creación</th>
+                      <th>Opciones</th>
                     </thead>
                     <tbody>
                     </tbody>
                     <tfoot>
-                      <th>Opciones</th>
+                      <th></th>
                       <th>Nombre</th>
                       <th>Descripción</th>
                       <th>Pais</th>
@@ -62,6 +63,7 @@ if (!isset($_SESSION["ap"])) {
                       <th>ResponsableMline</th>
                       <th>Creado por</th>
                       <th>Fecha creación</th>
+                      <th>Opciones</th>
                     </tfoot>
                   </table>
                 </div>

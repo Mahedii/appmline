@@ -46,15 +46,16 @@ switch ($_GET["op"]){
 
  		while ($reg=$rspta->fetch_object()){
  			$data[]=array(
- 				"0"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idempleado.')"><i class="fa fa-remove" ></i></a>'.
- 					' <a title="Editar" href="#" onclick="mostrar('.$reg->idempleado.')"><i class="fa fa-edit"></i></a>',
+ 				"0"=>'',
  				"1"=>$reg->nomcompleto,
  				"2"=>$reg->ap,
 				"3"=>$reg->rol,
  				"4"=>($reg->permisos==0)?'<span class="badge bg-danger rounded-pill ms-auto">Vea permisos</span>':'<span class="badge bg-success rounded-pill ms-auto">'.$reg->permisos.'</span>',
  				"5"=>($reg->condicion==1)?'<span class="badge bg-success rounded-pill ms-auto">Activado</span>':'<span class="badge bg-danger rounded-pill ms-auto">Desactivado</span>',
  				"6"=>$reg->fecrea,
- 				"7"=>$reg->agecrea
+ 				"7"=>$reg->agecrea,
+				"8"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idempleado.')"><i class="fa fa-remove" ></i></a>'.
+				 ' <a title="Editar" href="#" onclick="mostrar('.$reg->idempleado.')"><i class="fa fa-edit"></i></a>'
  				);
  		}
  		$results = array(

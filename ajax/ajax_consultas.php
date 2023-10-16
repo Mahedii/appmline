@@ -22,17 +22,18 @@ switch ($_GET["op"]){
 
  		while ($reg=$rspta->fetch_object()){
  			$data[]=array(
- 				"0"=>$reg->nomcompleto,
- 				"1"=>$reg->tel,
- 				"2"=>number_format($reg->monto, 0, '', ','),
- 				"3"=>number_format($reg->comision, 0, '', ','),
- 				"4"=>$reg->codigo,
- 				"5"=>$reg->agenciaA,
- 				"6"=>$reg->nomcompler,
- 				"7"=>$reg->agenciaB,
- 				"8"=>$reg->fecrea,
- 				"9"=>($reg->estadot=='Pendiente')?'<span class="label bg-orange">'.$reg->estadot.'</span>':
- 				'<span class="label bg-red">'.$reg->estadot.'</span>'
+				"0"=>'',
+ 				"1"=>$reg->nomcompleto,
+ 				"2"=>$reg->tel,
+ 				"3"=>number_format($reg->monto, 0, '', ','),
+ 				"4"=>number_format($reg->comision, 0, '', ','),
+ 				"5"=>$reg->codigo,
+ 				"6"=>$reg->agenciaA,
+ 				"7"=>$reg->nomcompler,
+ 				"8"=>$reg->agenciaB,
+ 				"9"=>$reg->fecrea,
+ 				"10"=>($reg->estadot=='Pendiente')?'<span class="label bg-orange">'.$reg->estadot.'</span>':
+ 					'<span class="label bg-red">'.$reg->estadot.'</span>'
  				);
  		}
  		$results = array(

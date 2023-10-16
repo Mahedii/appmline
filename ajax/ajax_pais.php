@@ -49,8 +49,7 @@ switch ($_GET["op"]){
 
  		while ($reg=$rspta->fetch_object()){
  			$data[]=array(
- 				"0"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idPais.')"><i class="fa fa-remove" ></i></a>'.
- 					' <a title="Editar" href="#" onclick="mostrar('.$reg->idPais.')"><i class="fa fa-edit"></i></a>',
+ 				"0"=>'',
  				"1"=>$reg->nombre,
  				"2"=>$reg->descripcion,
  				"3"=>$reg->limite_envioLOCAL,
@@ -64,7 +63,9 @@ switch ($_GET["op"]){
  				"11"=>$reg->partnerAPI,
  				"12"=>$reg->uscreador,
                 "13"=>$reg->fecrea,
-				"14"=>$reg->prefijoTel
+				"14"=>$reg->prefijoTel,
+				"15"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idPais.')"><i class="fa fa-remove" ></i></a>'.
+ 					' <a title="Editar" href="#" onclick="mostrar('.$reg->idPais.')"><i class="fa fa-edit"></i></a>'
  				);
 
  		}

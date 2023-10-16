@@ -91,20 +91,21 @@ switch ($_GET["op"]){
 			default:
 			$data[]=array(
 
-				"0"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idbanco.')"><i class="fa fa-remove" ></i></a>'.
-					' <a title="Editar" href="#" onclick="mostrar('.$reg->idbanco.')"><i class="fa fa-edit"></i></a>',
-                    "1"=>$reg->nombre,
-                    "2"=>$reg->descripcion,
-                   "3"=>$reg->pais_nombre,
-                   "4"=>$reg->ncp,
-                   "5"=>number_format($reg->ncpCapitalSaldo, 0, '', ','),
-                   "6"=>$reg->ncpComisiones,
-                   "7"=>number_format($reg->ncpComisionesSaldo, 0, '', ','),
-                   "8"=>$reg->ncpIVA,
-                   "9"=>number_format($reg->ncpIVASaldo, 0, '', ','),
-                   "10"=>$reg->responsable_nombre,
-                    "11"=>$reg->agentcrea,
-                    "12"=>$reg->fecrea
+				"0"=>'',
+				"1"=>$reg->nombre,
+				"2"=>$reg->descripcion,
+				"3"=>$reg->pais_nombre,
+				"4"=>$reg->ncp,
+				"5"=>number_format($reg->ncpCapitalSaldo, 0, '', ','),
+				"6"=>$reg->ncpComisiones,
+				"7"=>number_format($reg->ncpComisionesSaldo, 0, '', ','),
+				"8"=>$reg->ncpIVA,
+				"9"=>number_format($reg->ncpIVASaldo, 0, '', ','),
+				"10"=>$reg->responsable_nombre,
+				"11"=>$reg->agentcrea,
+				"12"=>$reg->fecrea,
+				"13"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idbanco.')"><i class="fa fa-remove" ></i></a>'.
+					' <a title="Editar" href="#" onclick="mostrar('.$reg->idbanco.')"><i class="fa fa-edit"></i></a>'
 				);
 
 			} // FIN switch

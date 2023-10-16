@@ -13,12 +13,12 @@ if (!isset($_SESSION["ap"])) {
     <div class="content-wrapper">
       <div class="container-xxl flex-grow-1 container-p-y">
 
-        <div class="d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
+        <!-- <div class="d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row py-3 mb-4">
           <h4 class="mb-sm-0 me-2">Registro empleados</h4>
           <div class="action-btns">
             <button class="create-new btn btn-primary waves-effect waves-light" tabindex="0" type="button"><span><i class="ti ti-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Agregar</span></span></button>
           </div>
-        </div>
+        </div> -->
 
         <div class="offcanvas offcanvas-end" id="add-new-record">
           <div class="offcanvas-header border-bottom">
@@ -109,7 +109,7 @@ if (!isset($_SESSION["ap"])) {
                 <div id="listadoregistros">
                   <table id="tbllistado" class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width:100%">
                     <thead>
-                      <th>Ops</th>
+                      <th></th>
                       <th>Nombre</th>
                       <th>DNI</th>
                       <th>Tel</th>
@@ -125,11 +125,12 @@ if (!isset($_SESSION["ap"])) {
                       <th>Creado</th>
                       <th>Fecha</th>
                       <th>Fecha reclutado</th>
+                      <th>Ops</th>
                     </thead>
                     <tbody>
                     </tbody>
                     <tfoot>
-                      <th>Ops</th>
+                      <th></th>
                       <th>Nombre</th>
                       <th>DNI</th>
                       <th>Tel</th>
@@ -145,6 +146,7 @@ if (!isset($_SESSION["ap"])) {
                       <th>Creado</th>
                       <th>Fecha</th>
                       <th>Fecha reclutado</th>
+                      <th>Ops</th>
                     </tfoot>
                   </table>
                 </div>

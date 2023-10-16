@@ -64,8 +64,7 @@ switch ($_GET["op"]){
 
  		while ($reg=$rspta->fetch_object()){
  			$data[]=array(
- 				"0"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idbkhis.')"><i class="fa fa-remove" ></i></a>'.
- 					' <a title="Editar" href="#" onclick="mostrarbkhis('.$reg->idtransaccionh.')"><i class="fa fa-edit"></i></a>',
+ 				"0"=>'',
  				"1"=>$reg->codigoh,
  				"2"=>$reg->nomcompletoch,
  				"3"=>$reg->nomcomplerh,
@@ -76,7 +75,9 @@ switch ($_GET["op"]){
  				"8"=>$reg->fecrea,
  				"9"=>$reg->fechavalidacion,
  				"10"=>($reg->estadoth=='Revalidar')?'<span class="label bg-orange">'.$reg->estadoth.'</span>':
- 				'<span class="label bg-green">'.$reg->estadoth.'</span>'
+ 					'<span class="label bg-green">'.$reg->estadoth.'</span>',
+				"11"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idbkhis.')"><i class="fa fa-remove" ></i></a>'.
+				 	' <a title="Editar" href="#" onclick="mostrarbkhis('.$reg->idtransaccionh.')"><i class="fa fa-edit"></i></a>'
  				);
  		}
  		$results = array(

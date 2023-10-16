@@ -49,16 +49,8 @@ switch ($_GET["op"]){
  		while ($reg=$rspta->fetch_object()){
 			
  			$data[]=array(
-				"0"=>$enum,
- 				// "1"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->DNIremitente.')"><i class="fa fa-remove" ></i></a>'.
- 				// 	' <a title="Editar" href="#" onclick="mostrar('.$reg->DNIremitente.')"><i class="fa fa-edit"></i></a>',
-				"1" => '<div class="dropdown d-inline-block">'.
-							'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
-							'<ul class="dropdown-menu dropdown-menu-end">'.
-								'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->DNIremitente.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
-								'<li><a class="dropdown-item remove-item-btn" title="Eliminar" href="#" onclick="eliminar('.$reg->DNIremitente.')"><i class="text-primary ti ti-trash align-bottom text-muted"></i> Delete</a></li>'.
-							'</ul>'.
-						'</div>',
+				"0"=>'',
+				"1"=>$enum,
 				"2"=>$reg->nomcompleto,
  				"3"=>$reg->DNIremitente,
 				"4"=>$reg->ncp,
@@ -68,9 +60,18 @@ switch ($_GET["op"]){
 				"8"=>$reg->agencia,
 				"9"=>$reg->direccion,
 				"10"=>($reg->estado=='1')?'<span class="label bg-green">Activo</span>':
- 				'<span class="label bg-danger">Supendido</span>',
+ 					'<span class="label bg-danger">Supendido</span>',
 				"11"=>$reg->agencrea,
- 				"12"=>$reg->fecrea
+ 				"12"=>$reg->fecrea,
+				// "13"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->DNIremitente.')"><i class="fa fa-remove" ></i></a>'.
+ 				// 	' <a title="Editar" href="#" onclick="mostrar('.$reg->DNIremitente.')"><i class="fa fa-edit"></i></a>',
+				"13" => '<div class="dropdown d-inline-block">'.
+					'<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="text-primary ti ti-dots-vertical align-middle"></i></button>'.
+					'<ul class="dropdown-menu dropdown-menu-end">'.
+						'<li><a class="dropdown-item edit-item-btn" title="Editar" href="#" onclick="mostrar('.$reg->DNIremitente.')"><i class="text-primary ti ti-pencil align-bottom text-muted"></i> Edit</a></li>'.
+						'<li><a class="dropdown-item remove-item-btn" title="Eliminar" href="#" onclick="eliminar('.$reg->DNIremitente.')"><i class="text-primary ti ti-trash align-bottom text-muted"></i> Delete</a></li>'.
+					'</ul>'.
+				'</div>'
  				);
 			$enum++;
  		}
