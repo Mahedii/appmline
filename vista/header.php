@@ -19,6 +19,7 @@
 
     
     <!-- <link rel="stylesheet" href="../public/dist/css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="../public/dist/css/bootstrap-select.min.css"> -->
     <!-- <link rel="stylesheet" href="../public/dist/assets/vendor/libs/select2/select2.css" /> -->
 
@@ -41,7 +42,7 @@
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/swiper/swiper.css" />
 
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/select2/select2.css" />
-    <link rel="stylesheet" href="../public/dist/assets/vendor/libs/bootstrap-select/bootstrap-select.css">
+    <!-- <link rel="stylesheet" href="../public/dist/assets/vendor/libs/bootstrap-select/bootstrap-select.css"> -->
 
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
     <link rel="stylesheet" href="../public/dist/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
@@ -105,13 +106,22 @@
         <?php $activePage = basename($_SERVER['PHP_SELF'], ".php"); ?>
         
         <ul class="menu-inner py-1">
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">ROLE</span>
+          </li>
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link bg-label-success waves-light">
+              <i class="menu-icon ti ti-user-code"></i>
+              <div data-i18n="<?php echo $_SESSION['rol']; ?>"><?php echo $_SESSION['rol']; ?></div>
+            </a>
+          </li>
 
           <li class="menu-header small text-uppercase">
             <span class="menu-header-text">MENU</span>
           </li>
           <li class="menu-item  <?php echo ($activePage === 'escritorio') ? 'active' : ''; ?>">
             <a href="escritorio.php" class="menu-link">
-              <i class="menu-icon tf-icons fa fa-laptop"></i>
+              <i class="menu-icon tf-icons ti ti-device-laptop"></i>
               <div data-i18n="Escritorio">Escritorio</div>
             </a>
           </li>

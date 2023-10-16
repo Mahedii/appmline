@@ -131,7 +131,7 @@ if (!isset($_SESSION["ap"])) {
           <form class="add-new-record pt-0 row g-2" name="formulario form-add-new-record" id="formulario" method="POST">
             <div class="col-sm-12">
               <label class="form-label">Pais de destino:</label>
-              <select class="form-control" name="pais_destino" id="pais_destino" required>
+              <select class="select2 form-select" name="pais_destino" id="pais_destino" required>
               </select>
             </div>
             <div class="col-sm-12">

@@ -73,19 +73,19 @@
   <script src="../public/dist/assets/vendor/libs/moment/moment.js"></script>
   <script src="../public/dist/assets/vendor/libs/flatpickr/flatpickr.js"></script>
 
+  <script src="../public/dist/js/bootstrap-select.min.js"></script>
+
   <!--select2 cdn-->
   <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
 
   <!-- <script src="../public/dist/assets/js/select2.init.js"></script> -->
   <script src="../public/dist/assets/vendor/libs/select2/select2.js"></script>
-
-  <script src="../public/dist/js/bootstrap-select.min.js"></script>
   <!-- <script src="../public/dist/assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script> -->
 
   <!-- Main JS -->
   <script src="../public/dist/assets/js/main.js"></script>
 
-  <!-- <script src="../public/dist/assets/js/form-layouts.js"></script> -->
+  <script src="../public/dist/assets/js/form-layouts.js"></script>
   
   <!-- Page JS -->
   <!-- <script src="../public/dist/assets/js/dashboards-analytics.js"></script> -->
