@@ -263,12 +263,12 @@ function listar() {
         "initComplete": function(settings, json) {
             var aaData = json.aaData;
             var sum = 0;
-            for (var i = 0; i < aaData.length; i++) {[]
+            for (var i = 0; i < aaData.length; i++) {
                 sum += parseInt(aaData[i][5].replace(/,/g, ''), 10);
-                // console.log(sum);
+                // console.log("After sum: " + sum);
             }
             $("#clientes-salado").text(sum);
-            // console.log("Sum: " + sum);
+            // console.log("Total Sum: " + sum);
         },
         responsive: {
             details: {
