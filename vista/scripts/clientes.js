@@ -89,6 +89,10 @@ function listar() {
                     return "";
                 },
             },
+            {
+                targets: 5,
+                className: "clientes-salado"
+            },
         ],
         dom: '<"card-header flex-column flex-md-row"<"head-label text-center"><"dt-action-buttons text-end pt-3 pt-md-0"B>><"row"<"col-sm-12 col-md-6"l><"col-sm-12 col-md-6 d-flex justify-content-center justify-content-md-end"f>>t<"row"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>',
         displayLength: 5,
@@ -255,6 +259,16 @@ function listar() {
             error: function(e) {
                 console.log(e.responseText);
             }
+        },
+        "initComplete": function(settings, json) {
+            var aaData = json.aaData;
+            var sum = 0;
+            for (var i = 0; i < aaData.length; i++) {[]
+                sum += parseInt(aaData[i][5].replace(/,/g, ''), 10);
+                // console.log(sum);
+            }
+            $("#clientes-salado").text(sum);
+            // console.log("Sum: " + sum);
         },
         responsive: {
             details: {

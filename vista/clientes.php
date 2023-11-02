@@ -50,7 +50,7 @@ if (!isset($_SESSION["ap"])) {
                       <th>Nombre completo</th>
                       <th>DNI</th>
                       <th>CUENTA CORRIENTE</th>
-                      <th>SALDO</th>
+                      <th id="clientes-salado">SALDO</th>
                       <th>Telefono</th>
                       <th>Pais</th>
                       <th>Agencia</th>
