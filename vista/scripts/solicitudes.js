@@ -232,6 +232,16 @@ function listar()
                 console.log(e.responseText);	
             }
         },
+        "initComplete": function(settings, json) {
+            var aaData = json.aaData;
+            var sum = 0;
+            for (var i = 0; i < aaData.length; i++) {
+                sum += parseInt(aaData[i][4].replace(/,/g, ''), 10);
+                // console.log("After sum: " + sum);
+            }
+            $("#solcitudes-monto").text(sum.toLocaleString());
+            console.log("Total Sum: " + sum);
+        },
         responsive: {
             details: {
                 display: $.fn.dataTable.Responsive.display.modal({

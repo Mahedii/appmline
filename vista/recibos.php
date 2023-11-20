@@ -141,8 +141,8 @@ if (!isset($_SESSION["ap"])) {
                     <th></th>
                     <th>Receptor</th>
                     <th>Telefono</th>
-                    <th>Monto</th>
-                    <th>Cobrar</th>
+                    <th id="recibos-monto">Monto</th>
+                    <th id="recibos-cobrar">Cobrar</th>
                     <th>Codigo</th>
                     <th>Agencia Receptora</th>
                     <th>Remitente</th>

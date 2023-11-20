@@ -254,6 +254,19 @@ function listar() {
                 console.log(e.responseText);
             }
         },
+        "initComplete": function(settings, json) {
+            var aaData = json.aaData;
+            var recibosMontosum = 0;
+            var recibosCobrarsum = 0;
+            for (var i = 0; i < aaData.length; i++) {
+                recibosMontosum += parseInt(aaData[i][3].replace(/,/g, ''), 10);
+                recibosCobrarsum += parseInt(aaData[i][4].replace(/,/g, ''), 10);
+                // console.log("After sum: " + sum);
+            }
+            $("#recibos-monto").text(recibosMontosum.toLocaleString());
+            $("#recibos-cobrar").text(recibosCobrarsum.toLocaleString());
+            console.log("Total Sum: " + recibosCobrarsum);
+        },
         responsive: {
             details: {
                 display: $.fn.dataTable.Responsive.display.modal({

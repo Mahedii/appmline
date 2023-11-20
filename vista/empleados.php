@@ -136,7 +136,7 @@ if (!isset($_SESSION["ap"])) {
                       <th>Tel</th>
                       <th>Cargo</th>
                       <th>Rol acceso</th>
-                      <th>Salario</th>
+                      <th id="empleados-salario">Salario</th>
                       <th>Login</th>
                       <th>Pais de trabajo</th>
                       <th>Ciudad</th>

@@ -70,9 +70,7 @@ switch ($_GET["op"]){
 			case 'CajeroUV': // SI ES UN USUARIO DE LA CAJA UV venta de unidades
 
 			$data[]=array(
-
-
- 				"0"=>'<a title="Editar" href="#" onclick="mostrar('.$reg->idbanco.')"><i class="fa fa-edit"></i></>',
+ 				"0"=>'',
  				"1"=>$reg->nombre,
  				"2"=>$reg->descripcion,
 				"3"=>$reg->pais_nombre,
@@ -84,13 +82,13 @@ switch ($_GET["op"]){
                 "9"=>number_format($reg->ncpIVASaldo, 0, '', ','),
 				"10"=>$reg->responsable_nombre,
  				"11"=>$reg->agentcrea,
- 				"12"=>$reg->fecrea
+ 				"12"=>$reg->fecrea,
+ 				"13"=>'<a title="Editar" href="#" onclick="mostrar('.$reg->idbanco.')"><i class="fa fa-edit"></i></>'
  				);
 			break;
 			
 			default:
 			$data[]=array(
-
 				"0"=>'',
 				"1"=>$reg->nombre,
 				"2"=>$reg->descripcion,
@@ -105,7 +103,7 @@ switch ($_GET["op"]){
 				"11"=>$reg->agentcrea,
 				"12"=>$reg->fecrea,
 				"13"=>'<a title="Eliminar" class="label bg-red" href="#" onclick="eliminar('.$reg->idbanco.')"><i class="fa fa-remove" ></i></a>'.
-					' <a title="Editar" href="#" onclick="mostrar('.$reg->idbanco.')"><i class="fa fa-edit"></i></a>'
+						'<a title="Editar" href="#" onclick="mostrar('.$reg->idbanco.')"><i class="fa fa-edit"></i></a>'
 				);
 
 			} // FIN switch

@@ -57,7 +57,7 @@ if (!isset($_SESSION["ap"])) {
                       <th>Descripción</th>
                       <th>Pais</th>
                       <th>Cuenta CAPITAL</th>
-                      <th>saldo cuenta CAPITAL</th>
+                      <th id="saldo-cuenta-capital">saldo cuenta CAPITAL</th>
                       <th>Cuenta COMISIONES</th>
                       <th>Saldo cuenta COMISIONES</th>
                       <th>Cuenta IVA</th>

@@ -267,7 +267,7 @@ function listar() {
                 sum += parseInt(aaData[i][5].replace(/,/g, ''), 10);
                 // console.log("After sum: " + sum);
             }
-            $("#clientes-salado").text(sum);
+            $("#clientes-salado").text(sum.toLocaleString());
             // console.log("Total Sum: " + sum);
         },
         responsive: {

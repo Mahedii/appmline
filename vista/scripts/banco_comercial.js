@@ -438,6 +438,18 @@ function listar() {
                 console.log(e.responseText);
             }
         },
+        "initComplete": function(settings, json) {
+            console.log("aaData");
+            var aaData = json.aaData;
+            var sum = 0;
+            // console.log(aaData);
+            for (var i = 0; i < aaData.length; i++) {
+                sum += parseInt(aaData[i][5].replace(/,/g, ''), 10);
+                // console.log("After sum: " + sum);
+            }
+            $("#saldo-cuenta-corriente").text(sum.toLocaleString());
+            // console.log("Total Sum: " + sum);
+        },
         responsive: {
             details: {
                 display: $.fn.dataTable.Responsive.display.modal({

@@ -255,6 +255,22 @@ function listar() {
                 console.log(e.responseText);
             }
         },
+        "initComplete": function(settings, json) {
+            var aaData = json.aaData;
+            var enviosMontosum = 0;
+            var enviosCobrarsum = 0;
+            var enviosComisionsum = 0;
+            for (var i = 0; i < aaData.length; i++) {
+                enviosMontosum += parseInt(aaData[i][3].replace(/,/g, ''), 10);
+                enviosCobrarsum += parseInt(aaData[i][4].replace(/,/g, ''), 10);
+                enviosComisionsum += parseInt(aaData[i][5].replace(/,/g, ''), 10);
+                // console.log("After sum: " + sum);
+            }
+            $("#envios-monto").text(enviosMontosum.toLocaleString());
+            $("#envios-cobrar").text(enviosCobrarsum.toLocaleString());
+            $("#envios-comision").text(enviosComisionsum.toLocaleString());
+            console.log("Total Sum: " + enviosComisionsum);
+        },
         responsive: {
             details: {
                 display: $.fn.dataTable.Responsive.display.modal({

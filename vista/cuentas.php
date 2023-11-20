@@ -55,7 +55,7 @@ if (!isset($_SESSION["ap"])) {
                       <th>Nombre cliente</th>
                       <th>Nº DE CUENTA</th>
                       <th>Tipo</th>
-                      <th>SALDO</th>
+                      <th id="saldo">SALDO</th>
                       <th>AGENCIA MASTER</th>
                       <th>Gestor</th>
                       <th>Pais</th>

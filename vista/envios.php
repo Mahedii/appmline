@@ -70,9 +70,9 @@ if (!isset($_SESSION["ap"])) {
                       <th></th>
                       <th>Remitente</th>
                       <th>Telefono</th>
-                      <th>Monto</th>
-                      <th>Cobrar</th>
-                      <th>Comision</th>
+                      <th id="envios-monto">Monto</th>
+                      <th id="envios-cobrar">Cobrar</th>
+                      <th id="envios-comision">Comision</th>
                       <th>Codigo</th>
                       <th>Agencia Emisora</th>
                       <th>Para</th>

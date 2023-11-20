@@ -46,7 +46,7 @@ if (!isset($_SESSION["ap"])) {
                       <th>Cod.</th>
                       <th>Remitente</th>
                       <th>Receptor</th>
-                      <th>Monto</th>
+                      <th id="solcitudes-monto">Monto</th>
                       <th>Descripcion</th>
                       <th>Operacion</th>
                       <th>Creado por</th>

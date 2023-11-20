@@ -49,11 +49,11 @@ if (!isset($_SESSION["ap"])) {
                       <th>Pais origen</th>
                       <th>Pais destino</th>
                       <th>Descripción</th>
-                      <th>[Monto inicial</th>
-                      <th>Monto tope]</th>
+                      <th id="monto-inicial">[Monto inicial</th>
+                      <th id="monto-tope">Monto tope]</th>
                       <th>Monto KILO</th>
                       <th>Monto SOBRE</th>
-                      <th>Comisión</th>
+                      <th id="comision">Comisión</th>
                       <th>Fecha</th>
                       <th>Creado por</th>
                       <th>Opciones</th>

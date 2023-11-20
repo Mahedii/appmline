@@ -51,7 +51,7 @@ if (!isset($_SESSION["ap"])) {
                       <th>Pais</th>
                       <th>Ciudad</th>
                       <th>Cuenta CORRIENTE</th>
-                      <th>saldo cuenta CORRIENTE</th>
+                      <th id="saldo-cuenta-corriente">saldo cuenta CORRIENTE</th>
                       <th>Responsable</th>
                       <th>Gerente</th>
                       <th>Creado por</th>

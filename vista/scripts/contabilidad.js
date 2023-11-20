@@ -239,6 +239,24 @@ function listar()
                 console.log(e.responseText);	
             }
         },
+        "initComplete": function(settings, json) {
+            var aaData = json.aaData;
+            var ingresosSum = 0;
+            var gastosSum = 0;
+            // console.log(aaData);
+            for (var i = 0; i < aaData.length; i++) {
+                if (aaData[i][2] >= 0 && aaData[i][2] != "") {
+                    ingresosSum += parseInt(aaData[i][2].replace(/,/g, ''), 10);
+                }
+                if (aaData[i][2] >= 0 && aaData[i][3] != "") {
+                    gastosSum += parseInt(aaData[i][3].replace(/,/g, ''), 10);
+                }
+                // console.log("After sum: " + ingresosSum);
+            }
+            $("#ingresos").text(ingresosSum.toLocaleString());
+            $("#gastos").text(gastosSum.toLocaleString());
+            // console.log("Total Sum: " + sum);
+        },
         responsive: {
             details: {
                 display: $.fn.dataTable.Responsive.display.modal({

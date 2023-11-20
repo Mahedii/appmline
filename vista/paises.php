@@ -53,12 +53,12 @@ if (!isset($_SESSION["ap"])) {
                       <th></th>
                       <th>Nombre </th>
                       <th>Descripcion</th>
-                      <th>Limit envio LOCAL</th>
-                      <th>Limit envio INT</th>
+                      <th id="limit-envio-local">Limit envio LOCAL</th>
+                      <th id="limit-envio-int">Limit envio INT</th>
                       <th>Moneda</th>
                       <th>IVA</th>
-                      <th>% Envio</th>
-                      <th>% Recibir</th>
+                      <th id="paises-envio">% Envio</th>
+                      <th id="paises-recibir">% Recibir</th>
                       <th>% Envio PAQ.</th>
                       <th>% Recibir PAQ.</th>
                       <th>Partner API</th>

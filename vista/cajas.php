@@ -56,7 +56,7 @@ if (!isset($_SESSION["ap"])) {
                       <th>AGENCIA MASTER</th>
                       <th>Cliente</th>
                       <th>Cajero</th>
-                      <th>SALDO CORRIENTE</th>
+                      <th id="saldo-corriente">SALDO CORRIENTE</th>
                       <th>SALDO COMISINES</th>
                       <th>CUENTA CORRIENTE</th>
                       <th>CUENTA COMISINES</th>

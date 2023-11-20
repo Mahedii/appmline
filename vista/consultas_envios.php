@@ -65,9 +65,9 @@ if (!isset($_SESSION["ap"])) {
                   <tfoot>
                     <th></th>
                     <th>Remitente</th>
-                    <th>Telefono</th>
-                    <th>Monto</th>
-                    <th>Comision</th> <!-- <th>Descripcion</th> si es un paquete -->
+                    <th id="consultas-envios-telefono">Telefono</th>
+                    <th id="consultas-envios-monto">Monto</th>
+                    <th id="consultas-envios-comision">Comision</th> <!-- <th>Descripcion</th> si es un paquete -->
                     <th>Codigo</th>
                     <th>Agencia Emisora</th>
                     <th>Para</th>

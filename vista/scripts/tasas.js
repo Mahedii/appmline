@@ -245,6 +245,23 @@ function listar() {
                 console.log(e.responseText);
             }
         },
+        "initComplete": function(settings, json) {
+            var aaData = json.aaData;
+            var inicialSum = 0;
+            var topeSum = 0;
+            var comisionSum = 0;
+            // console.log(aaData);
+            for (var i = 0; i < aaData.length; i++) {
+                inicialSum += parseInt(aaData[i][4].replace(/,/g, ''), 10);
+                topeSum += parseInt(aaData[i][5].replace(/,/g, ''), 10);
+                comisionSum += parseInt(aaData[i][8].replace(/,/g, ''), 10);
+                // console.log("After sum: " + sum);
+            }
+            $("#monto-inicial").text(inicialSum.toLocaleString());
+            $("#monto-tope").text(topeSum.toLocaleString());
+            $("#comision").text(comisionSum.toLocaleString());
+            console.log("Total inicial Sum: " + inicialSum);
+        },
         responsive: {
             details: {
                 display: $.fn.dataTable.Responsive.display.modal({

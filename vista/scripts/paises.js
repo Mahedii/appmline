@@ -237,6 +237,25 @@ function listar() {
                 console.log(e.responseText);
             }
         },
+        "initComplete": function(settings, json) {
+            var aaData = json.aaData;
+            var limitEnvioLocalsum = 0;
+            var limitEnvioIntsum = 0;
+            var paisesEnviosum = 0;
+            var paisesRecibirsum = 0;
+            for (var i = 0; i < aaData.length; i++) {
+                limitEnvioLocalsum += parseInt(aaData[i][3].replace(/,/g, ''), 10);
+                limitEnvioIntsum += parseInt(aaData[i][4].replace(/,/g, ''), 10);
+                paisesEnviosum += parseInt(aaData[i][7].replace(/,/g, ''), 10);
+                paisesRecibirsum += parseInt(aaData[i][8].replace(/,/g, ''), 10);
+                // console.log("After sum: " + sum);
+            }
+            $("#limit-envio-local").text(limitEnvioLocalsum.toLocaleString());
+            $("#limit-envio-int").text(limitEnvioIntsum.toLocaleString());
+            $("#paises-envio").text(paisesEnviosum.toLocaleString());
+            $("#paises-recibir").text(paisesRecibirsum.toLocaleString());
+            console.log("Total Sum: " + paisesEnviosum);
+        },
         responsive: {
             details: {
                 display: $.fn.dataTable.Responsive.display.modal({

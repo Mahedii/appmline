@@ -44,8 +44,8 @@ if (!isset($_SESSION["ap"])) {
                     <tfoot>
                       <th></th>
                       <th>Concepto</th>
-                      <th>Ingresos</th>
-                      <th>Gastos</th>
+                      <th id="ingresos">Ingresos</th>
+                      <th id="gastos">Gastos</th>
                       <th>Observación</th>
                       <th>Agencia</th>
                       <th>Creado por</th>

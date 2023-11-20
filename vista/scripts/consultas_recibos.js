@@ -25,7 +25,8 @@ function limpiar()
 //Función Listar, se llama arriba de este mismo archivo en la funcion init
 function listar()
 {
-	
+    $('#tbllistado').DataTable().destroy();
+    $('#tbllistado tbody').empty();
 	var fecha_inicio = $("#fecha_inicio").val();
 	var fecha_final = $("#fecha_final").val();
 	var DNIremitente = $("#DNIremitente").val();
@@ -212,6 +213,23 @@ function listar()
             error: function(e){
                 console.log(e.responseText);	
             }
+        },
+        "initComplete": function(settings, json) {
+            var aaData = json.aaData;
+            var recibosMontoSum = 0;
+            // var recibosTelefonoSum = 0;
+            // var recibosComisionSum = 0;
+            // console.log(aaData);
+            for (var i = 0; i < aaData.length; i++) {
+                recibosMontoSum += parseInt(aaData[i][3].replace(/,/g, ''), 10);
+                // recibosTelefonoSum += parseInt(aaData[i][2].replace(/,/g, ''), 10);
+                // recibosComisionSum += parseInt(aaData[i][4].replace(/,/g, ''), 10);
+                // console.log("After sum: " + sum);
+            }
+            $("#consultas-recibos-monto").text(recibosMontoSum.toLocaleString());
+            // $("#consultas-recibos-telefono").text(recibosTelefonoSum.toLocaleString());
+            // $("#consultas-recibos-comision").text(recibosComisionSum.toLocaleString());
+            console.log("Total Sum: " + recibosMontoSum);
         },
         responsive: {
             details: {

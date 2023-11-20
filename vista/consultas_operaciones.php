@@ -88,7 +88,7 @@ if (!isset($_SESSION["ap"])) {
                     <th></th>
                     <th>Remitente</th>
                     <th>Cuenta remite</th>
-                    <th>Monto</th>
+                    <th id="consultas-operaciones-monto">Monto</th>
                     <th>Codigo</th>
                     <th>Codigo OPE</th>
                     <th>Fraseo OPE</th>

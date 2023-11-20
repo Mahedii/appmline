@@ -34,7 +34,8 @@ function limpiar() {
 
 //Función Listar, se llama arriba de este mismo archivo en la funcion init
 function listar() {
-
+    $('#tbllistado').DataTable().destroy();
+    $('#tbllistado tbody').empty();
     var fecha_inicio = $("#fecha_inicio").val();
     var fecha_final = $("#fecha_final").val();
     var codigo_ope = $("#codigo_ope").val();
@@ -223,6 +224,23 @@ function listar() {
             error: function(e) {
                 console.log(e.responseText);
             }
+        },
+        "initComplete": function(settings, json) {
+            var aaData = json.aaData;
+            var operacionesMontoSum = 0;
+            // var operacionesTelefonoSum = 0;
+            // var operacionesComisionSum = 0;
+            // console.log(aaData);
+            for (var i = 0; i < aaData.length; i++) {
+                operacionesMontoSum += parseInt(aaData[i][3].replace(/,/g, ''), 10);
+                // operacionesTelefonoSum += parseInt(aaData[i][2].replace(/,/g, ''), 10);
+                // operacionesComisionSum += parseInt(aaData[i][4].replace(/,/g, ''), 10);
+                // console.log("After sum: " + sum);
+            }
+            $("#consultas-operaciones-monto").text(operacionesMontoSum.toLocaleString());
+            // $("#consultas-operaciones-telefono").text(operacionesTelefonoSum.toLocaleString());
+            // $("#consultas-operaciones-comision").text(operacionesComisionSum.toLocaleString());
+            console.log("Total Sum: " + operacionesMontoSum);
         },
         responsive: {
             details: {
