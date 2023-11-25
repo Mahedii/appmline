@@ -21,6 +21,12 @@ function init() {
 
 }
 
+$(document).on('click', '.create-new', function (e) {
+    // alert("yo");
+    // limpiar();
+    mostrarform(true);
+});
+
 //Función limpiar
 function limpiar() {
 
@@ -50,19 +56,21 @@ function limpiar() {
 function mostrarform(flag) {
     limpiar();
     if (flag) {
-        // $("#listadoregistros").hide();
-        // $("#formularioregistros").show();
-        var t = document.querySelector("#add-new-record");
-        (offCanvasEl = new bootstrap.Offcanvas(t)),
-        offCanvasEl.show();
-        $("#btnGuardar").prop("disabled", false);
-        $("#btnagregar").hide();
-        $("#DNIremitente").attr('readonly', false);
-        $("#monto").attr('readonly', false);
+        // // $("#listadoregistros").hide();
+        // // $("#formularioregistros").show();
+        // var t = document.querySelector("#add-new-record");
+        // (offCanvasEl = new bootstrap.Offcanvas(t)),
+        // offCanvasEl.show();
+        // $("#btnGuardar").prop("disabled", false);
+        // $("#btnagregar").hide();
+        // $("#DNIremitente").attr('readonly', false);
+        // $("#monto").attr('readonly', false);
+        $("#add-new-record").show();
     } else {
         // $("#listadoregistros").show();
         // $("#formularioregistros").hide();
-        $("#btnagregar").show();
+        // $("#btnagregar").show();  
+        $("#add-new-record").hide();
     }
 }
 
@@ -70,6 +78,7 @@ function mostrarform(flag) {
 function cancelarform() {
     limpiar();
     mostrarform(false);
+    $("#add-new-record").hide();
 }
 
 //Función Listar, se llama arriba de este mismo archivo en la funcion init
@@ -244,7 +253,7 @@ function listar() {
             },
             {
                 text: '<i class="ti ti-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Agregar</span>',
-                className: "create-new btn btn-primary waves-effect waves-light",
+                className: "create-new open-modal btn btn-primary waves-effect waves-light",
             },
         ],
         "ajax": {
